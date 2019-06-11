@@ -1,0 +1,64 @@
+
+application {
+  config {
+    baseName angular,
+    applicationType monolith,
+    clientFramework angularX,
+
+    packageName tech.jhipster.angular.demo,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider ehcache,
+    buildTool maven,
+    testFrameworks [protractor, gatling]
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName react,
+    applicationType monolith,
+    clientFramework react,
+    packageName tech.jhipster.react.demo,
+
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider ehcache,
+    buildTool maven,
+    testFrameworks [protractor, gatling]
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName vuejs,
+    applicationType monolith,
+    clientFramework vuejs,
+    packageName tech.jhipster.react.demo,
+
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider ehcache,
+    buildTool maven,
+    testFrameworks [protractor, gatling]
+  }
+  entities *
+}
+
+entity Customer {
+    firstName String required
+    lastName String required
+    gender Gender required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}
