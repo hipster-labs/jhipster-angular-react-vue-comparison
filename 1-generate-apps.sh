@@ -1,2 +1,2 @@
 #Generate apps
-jhipster import-jdl apps.jdl
+jhipster import-jdl apps.jdl --skip-checks
