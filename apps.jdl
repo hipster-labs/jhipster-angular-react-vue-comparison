@@ -68,5 +68,5 @@ enum Gender {
 deployment {
   deploymentType docker-compose
   appsFolders [angular, react, vuejs]
-  dockerRepositoryName "jhipster"
+  dockerRepositoryName "pbesson"
 }

@@ -1,0 +1,1064 @@
+{
+  "lighthouse-core/audits/accessibility/accesskeys.js | description": {
+    "message": "A hozzáférési kulcsok segítségével a felhasználók gyorsan fókuszálhatnak az oldal adott részeire. A megfelelő navigáció érdekében az összes hozzáférési kulcsnak egyedinek kell lennie. [További információ](https://dequeuniversity.com/rules/axe/3.1/accesskeys?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/accesskeys.js | failureTitle": {
+    "message": "Nem egyedi `[accesskey]` értékek"
+  },
+  "lighthouse-core/audits/accessibility/accesskeys.js | title": {
+    "message": "Az `[accesskey]` értékek egyediek"
+  },
+  "lighthouse-core/audits/accessibility/aria-allowed-attr.js | description": {
+    "message": "Minden egyes ARIA `role` attribútum `aria-*` attribútumok konkrét alkészletét támogatja. Ha nem megfelelő alkészletet használ, érvényteleníti az `aria-*` attribútumokat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-allowed-attr?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-allowed-attr.js | failureTitle": {
+    "message": "Bizonyos `[aria-*]` attribútumok nem felelnek meg a szerepkörüknek"
+  },
+  "lighthouse-core/audits/accessibility/aria-allowed-attr.js | title": {
+    "message": "Az `[aria-*]` attribútumok megfelelnek a szerepkörüknek"
+  },
+  "lighthouse-core/audits/accessibility/aria-required-attr.js | description": {
+    "message": "Bizonyos ARIA-szerepkörök kötelező attribútumokkal rendelkeznek, amelyek az elem állapotát írják le a képernyőolvasók számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-required-attr?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-required-attr.js | failureTitle": {
+    "message": "Egyes `[role]` attribútumok nem rendelkeznek az összes szükséges `[aria-*]` attribútummal"
+  },
+  "lighthouse-core/audits/accessibility/aria-required-attr.js | title": {
+    "message": "A `[role]` attribútumok az összes szükséges `[aria-*]` attribútummal rendelkeznek"
+  },
+  "lighthouse-core/audits/accessibility/aria-required-children.js | description": {
+    "message": "Bizonyos fölérendelt ARIA-szerepköröknek konkrét alárendelt szerepköröket kell tartalmazniuk, hogy megfelelően teljesíthessék a kívánt kisegítő funkciójukat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-required-children?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-required-children.js | failureTitle": {
+    "message": "Hiányoznak olyan `[role]` attribútummal rendelkező elemek, amelyekhez konkrét alárendelt `[role]` attribútumokra van szükség."
+  },
+  "lighthouse-core/audits/accessibility/aria-required-children.js | title": {
+    "message": "Olyan `[role]` attribútummal rendelkező elemek találhatók, amelyekhez konkrét alárendelt `[role]` attribútumokra van szükség."
+  },
+  "lighthouse-core/audits/accessibility/aria-required-parent.js | description": {
+    "message": "Bizonyos alárendelt ARIA-szerepköröket konkrét fölérendelt szerepköröknek kell tartalmazniuk, hogy megfelelően teljesíthessék a kívánt kisegítő funkciójukat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-required-parent?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-required-parent.js | failureTitle": {
+    "message": "A `[role]` attribútumok nem a kötelező fölérendelt elemükben találhatók"
+  },
+  "lighthouse-core/audits/accessibility/aria-required-parent.js | title": {
+    "message": "A `[role]` attribútumok a kötelező fölérendelt elemben találhatók"
+  },
+  "lighthouse-core/audits/accessibility/aria-roles.js | description": {
+    "message": "Az ARIA-szerepköröknek érvényes értékekkel kell rendelkezniük, hogy megfelelően teljesíthessék a kívánt kisegítő funkciójukat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-roles?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-roles.js | failureTitle": {
+    "message": "Bizonyos `[role]` attribútumok értékei érvénytelenek"
+  },
+  "lighthouse-core/audits/accessibility/aria-roles.js | title": {
+    "message": "A `[role]` attribútum értékei érvényesek"
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr-value.js | description": {
+    "message": "A kisegítő technológiák (például képernyőolvasók) nem tudják értelmezni az érvénytelen értékkel rendelkező ARIA-attribútumokat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-valid-attr-value?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr-value.js | failureTitle": {
+    "message": "Bizonyos `[aria-*]` attribútumok nem rendelkeznek érvényes értékekkel"
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr-value.js | title": {
+    "message": "Az `[aria-*]` attribútumok érvényes értékekkel rendelkeznek"
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr.js | description": {
+    "message": "A kisegítő technológiák (például képernyőolvasók) nem tudják értelmezni az érvénytelen névvel rendelkező ARIA-attribútumokat. [További információ](https://dequeuniversity.com/rules/axe/3.1/aria-valid-attr?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr.js | failureTitle": {
+    "message": "Hiányzó vagy elgépelt `[aria-*]` attribútumok"
+  },
+  "lighthouse-core/audits/accessibility/aria-valid-attr.js | title": {
+    "message": "Az `[aria-*]` attribútumok érvényesek és nincsenek elgépelve"
+  },
+  "lighthouse-core/audits/accessibility/audio-caption.js | description": {
+    "message": "A feliratok használhatóvá teszik az audioelemeket a siket és hallássérült felhasználók számára a fontos információk megadásával (például ki beszél, mit mond, valamint egyéb, nem beszédalapú információk). [További információ](https://dequeuniversity.com/rules/axe/3.1/audio-caption?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/audio-caption.js | failureTitle": {
+    "message": "Hiányzó `<track>` elem `[kind=\"captions\"]` attribútummal bizonyos `<audio>` elemeknél."
+  },
+  "lighthouse-core/audits/accessibility/audio-caption.js | title": {
+    "message": "Az `<audio>` elemek tartalmaznak `<track>` elemet `[kind=\"captions\"]` attribútummal."
+  },
+  "lighthouse-core/audits/accessibility/axe-audit.js | failingElementsHeader": {
+    "message": "Hibás elemek"
+  },
+  "lighthouse-core/audits/accessibility/button-name.js | description": {
+    "message": "Ha valamelyik gomb nem rendelkezik hozzáférhető névvel, a képernyőolvasók „gombként” jelzik, ami használhatatlanná teszi a képernyőolvasóra hagyatkozó felhasználók számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/button-name?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/button-name.js | failureTitle": {
+    "message": "Bizonyos gombok nem rendelkeznek hozzáférhető névvel"
+  },
+  "lighthouse-core/audits/accessibility/button-name.js | title": {
+    "message": "A gombok rendelkeznek kisegítő névvel"
+  },
+  "lighthouse-core/audits/accessibility/bypass.js | description": {
+    "message": "Az ismétlődő tartalmakat megkerülő módszerek megvalósításával a billentyűzetet használó személyek hatékonyabban navigálhatnak az oldalon. [További információ](https://dequeuniversity.com/rules/axe/3.1/bypass?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/bypass.js | failureTitle": {
+    "message": "Az oldal nem tartalmaz címsort, átugró linket vagy igazodásipont-régiót"
+  },
+  "lighthouse-core/audits/accessibility/bypass.js | title": {
+    "message": "Az oldal címsort, átugró linket vagy igazodásipont-régiót tartalmaz"
+  },
+  "lighthouse-core/audits/accessibility/color-contrast.js | description": {
+    "message": "Az alacsony kontrasztú szöveg számos felhasználó számára nehezen vagy egyáltalán nem olvasható. [További információ](https://dequeuniversity.com/rules/axe/3.1/color-contrast?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/color-contrast.js | failureTitle": {
+    "message": "Nem megfelelő a háttér- és előtérszínek közötti kontrasztarány."
+  },
+  "lighthouse-core/audits/accessibility/color-contrast.js | title": {
+    "message": "Megfelelő a háttér- és előtérszínek közötti kontrasztarány"
+  },
+  "lighthouse-core/audits/accessibility/definition-list.js | description": {
+    "message": "Ha nem megfelelő a definíciós listák jelölése, a képernyőolvasók zavaros vagy pontatlan szöveget generálhatnak. [További információ](https://dequeuniversity.com/rules/axe/3.1/definition-list?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/definition-list.js | failureTitle": {
+    "message": "Bizonyos `<dl>` elemek nem csak megfelelően rendezett `<dt>` és `<dd>` csoportokat, `<script>` vagy `<template>` elemeket tartalmaznak."
+  },
+  "lighthouse-core/audits/accessibility/definition-list.js | title": {
+    "message": "A `<dl>` elemek csak megfelelően rendezett `<dt>` és `<dd>` csoportokat, `<script>` vagy `<template>` elemeket tartalmaznak."
+  },
+  "lighthouse-core/audits/accessibility/dlitem.js | description": {
+    "message": "A definíciós lista elemeit (`<dt>` és `<dd>`) fölérendelt `<dl>` elembe kell foglalni, hogy a képernyőolvasók megfelelően olvashassák fel őket. [További információ](https://dequeuniversity.com/rules/axe/3.1/dlitem?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/dlitem.js | failureTitle": {
+    "message": "A definíciós lista elemei nem `<dl>` elemek között találhatók"
+  },
+  "lighthouse-core/audits/accessibility/dlitem.js | title": {
+    "message": "A definíciós lista elemei `<dl>` elemek között találhatók"
+  },
+  "lighthouse-core/audits/accessibility/document-title.js | description": {
+    "message": "A cím áttekintést ad az oldalról a képernyőolvasót használó személyeknek, a keresőmotorok pedig nagymértékben hagyatkoznak rá annak meghatározásához, hogy az oldal releváns-e az adott kereséshez. [További információ](https://developers.google.com/web/tools/lighthouse/audits/title)."
+  },
+  "lighthouse-core/audits/accessibility/document-title.js | failureTitle": {
+    "message": "A dokumentum nem rendelkezik `<title>` elemmel"
+  },
+  "lighthouse-core/audits/accessibility/document-title.js | title": {
+    "message": "A dokumentum rendelkezik `<title>` elemmel"
+  },
+  "lighthouse-core/audits/accessibility/duplicate-id.js | description": {
+    "message": "Az „id” attribútum értékének egyedinek kell lennie, hogy a kisegítő technológiák ne hagyhassák figyelmen kívül a további előfordulásokat. [További információ](https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/duplicate-id.js | failureTitle": {
+    "message": "Az oldalon található egyes `[id]` attribútumok nem egyediek"
+  },
+  "lighthouse-core/audits/accessibility/duplicate-id.js | title": {
+    "message": "Az oldalon található `[id]` attribútumok egyediek"
+  },
+  "lighthouse-core/audits/accessibility/frame-title.js | description": {
+    "message": "A képernyőolvasók a keretek címeire hagyatkoznak a keret tartalmának bemutatásához. [További információ](https://dequeuniversity.com/rules/axe/3.1/frame-title?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/frame-title.js | failureTitle": {
+    "message": "Cím nélküli `<frame>` vagy `<iframe>` elemek"
+  },
+  "lighthouse-core/audits/accessibility/frame-title.js | title": {
+    "message": "A `<frame>` vagy `<iframe>` elemek rendelkeznek címmel"
+  },
+  "lighthouse-core/audits/accessibility/html-has-lang.js | description": {
+    "message": "Ha az oldal nem határoz meg „lang” attribútumot, a képernyőolvasó feltételezi, hogy az oldal nyelve megegyezik a felhasználó által a képernyőolvasó beállításakor megadott alapértelmezett nyelvvel. Ha az oldal tényleges nyelve eltér az alapértelmezett nyelvtől, akkor előfordulhat, hogy a képernyőolvasó helytelen kiejtéssel olvassa fel az oldal szövegét. [További információ](https://dequeuniversity.com/rules/axe/3.1/html-has-lang?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/html-has-lang.js | failureTitle": {
+    "message": "A `<html>` elem nem rendelkezik `[lang]` attribútummal"
+  },
+  "lighthouse-core/audits/accessibility/html-has-lang.js | title": {
+    "message": "A `<html>` elem rendelkezik `[lang]` attribútummal"
+  },
+  "lighthouse-core/audits/accessibility/html-lang-valid.js | description": {
+    "message": "Érvényes [BCP 47-nyelv](https://www.w3.org/International/questions/qa-choosing-language-tags#question) megadása segít a képernyőolvasónak a szöveg megfelelő felolvasásában. [További információ](https://dequeuniversity.com/rules/axe/3.1/valid-lang?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/html-lang-valid.js | failureTitle": {
+    "message": "A `<html>` elem esetében érvénytelen érték van megadva a `[lang]` attribútumnál."
+  },
+  "lighthouse-core/audits/accessibility/html-lang-valid.js | title": {
+    "message": "A `<html>` elem esetében érvényes érték van megadva a `[lang]` attribútumnál"
+  },
+  "lighthouse-core/audits/accessibility/image-alt.js | description": {
+    "message": "A tájékoztató elemeknél rövid, leíró alternatív szöveg használata ajánlott. A díszítőelemek figyelmen kívül hagyhatók üres „alt” attribútummal. [További információ](https://dequeuniversity.com/rules/axe/3.1/image-alt?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/image-alt.js | failureTitle": {
+    "message": "Bizonyos képelemek nem rendelkeznek `[alt]` attribútumokkal"
+  },
+  "lighthouse-core/audits/accessibility/image-alt.js | title": {
+    "message": "A képelemek rendelkeznek `[alt]` attribútumokkal"
+  },
+  "lighthouse-core/audits/accessibility/input-image-alt.js | description": {
+    "message": "Ha képet használ `<input>` gombként, alternatív szöveg megadásával segíthet a képernyőolvasót használó személyek számára a gomb funkciójának megértésében. [További információ](https://dequeuniversity.com/rules/axe/3.1/input-image-alt?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/input-image-alt.js | failureTitle": {
+    "message": "Bizonyos `<input type=\"image\">` elemek nem rendelkeznek `[alt]` szöveggel"
+  },
+  "lighthouse-core/audits/accessibility/input-image-alt.js | title": {
+    "message": "Az `<input type=\"image\">` elemek rendelkeznek `[alt]` szöveggel"
+  },
+  "lighthouse-core/audits/accessibility/label.js | description": {
+    "message": "A címkék biztosítják, hogy a formátumvezérlőket megfelelően jelezze a rendszer a kisegítő technológiák (pl. képernyőolvasók) segítségével. [További információ](https://dequeuniversity.com/rules/axe/3.1/label?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/label.js | failureTitle": {
+    "message": "Bizonyos formátumelemek nem rendelkeznek társított címkékkel"
+  },
+  "lighthouse-core/audits/accessibility/label.js | title": {
+    "message": "A formátumelemekhez megfelelő címkék vannak társítva"
+  },
+  "lighthouse-core/audits/accessibility/layout-table.js | description": {
+    "message": "Az elrendezési célokat szolgáló táblázat nem tartalmazhat adatelemeket (pl. „th” vagy „caption” elem, illetve „summary” attribútum), mert ez zavaró lehet a képernyőolvasót használó személyek számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/layout-table?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/layout-table.js | failureTitle": {
+    "message": "A prezentációs `<table>` elemek nem kerülik a `<th>`, `<caption>` elemek vagy a `[summary]` attribútumok használatát."
+  },
+  "lighthouse-core/audits/accessibility/layout-table.js | title": {
+    "message": "A prezentációs `<table>` elemek kerülik a `<th>`, `<caption>` elemek vagy a `[summary]` attribútumok használatát."
+  },
+  "lighthouse-core/audits/accessibility/link-name.js | description": {
+    "message": "A felismerhető, egyedi és fókuszálható linkszövegek (és linkként használt képek alternatív szövegei) jobb navigációs élményt biztosítanak a képernyőolvasóra hagyatkozó felhasználók számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/link-name?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/link-name.js | failureTitle": {
+    "message": "A linkekhez nem tartozik felismerhető név"
+  },
+  "lighthouse-core/audits/accessibility/link-name.js | title": {
+    "message": "A linkekhez felismerhető név tartozik"
+  },
+  "lighthouse-core/audits/accessibility/list.js | description": {
+    "message": "A képernyőolvasóknak külön módszerük van a listák felolvasására. A megfelelő listastruktúra biztosítása segíti a képernyőolvasók működését. [További információ](https://dequeuniversity.com/rules/axe/3.1/list?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/list.js | failureTitle": {
+    "message": "A listák nem csak `<li>` elemeket és szkriptet támogató elemeket (`<script>` és `<template>`) tartalmaznak."
+  },
+  "lighthouse-core/audits/accessibility/list.js | title": {
+    "message": "A listák csak `<li>` elemeket és szkriptet támogató elemeket (`<script>` és `<template>`) tartalmaznak."
+  },
+  "lighthouse-core/audits/accessibility/listitem.js | description": {
+    "message": "A listaelemeket (`<li>`) fölérendelt `<ul>` vagy `<ol>` elemekben kell elhelyezni, hogy a képernyőolvasók megfelelően olvassák fel őket. [További információ](https://dequeuniversity.com/rules/axe/3.1/listitem?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/listitem.js | failureTitle": {
+    "message": "Bizonyos listaelemek (`<li>`) nem fölérendelt `<ul>` vagy `<ol>` elemek között találhatók."
+  },
+  "lighthouse-core/audits/accessibility/listitem.js | title": {
+    "message": "A listaelemek (`<li>`) fölérendelt `<ul>` vagy `<ol>` elemek között találhatók."
+  },
+  "lighthouse-core/audits/accessibility/meta-refresh.js | description": {
+    "message": "A felhasználók nem számítanak az oldal automatikus frissítésére, ami visszahelyezi a fókuszt az oldal tetejére. Ez frusztráló vagy zavaró élményhez vezethet. [További információ](https://dequeuniversity.com/rules/axe/3.1/meta-refresh?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/meta-refresh.js | failureTitle": {
+    "message": "A dokumentum a `<meta http-equiv=\"refresh\">` metacímkét használja"
+  },
+  "lighthouse-core/audits/accessibility/meta-refresh.js | title": {
+    "message": "A dokumentum nem használja a `<meta http-equiv=\"refresh\">` metacímkét"
+  },
+  "lighthouse-core/audits/accessibility/meta-viewport.js | description": {
+    "message": "A nagyítás letiltása problémát jelent a gyengén látó felhasználók számára, akik a képernyőnagyításra hagyatkoznak ahhoz, hogy megfelelően láthassák a weboldal tartalmát. [További információ](https://dequeuniversity.com/rules/axe/3.1/meta-viewport?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/meta-viewport.js | failureTitle": {
+    "message": "A `[user-scalable=\"no\"]` értéket használja a `<meta name=\"viewport\">` elemben vagy a `[maximum-scale]` attribútum értéke ötnél kevesebb."
+  },
+  "lighthouse-core/audits/accessibility/meta-viewport.js | title": {
+    "message": "Nem használja a `[user-scalable=\"no\"]` értéket a `<meta name=\"viewport\">` elemben, és a `[maximum-scale]` attribútum értéke nem kevesebb ötnél."
+  },
+  "lighthouse-core/audits/accessibility/object-alt.js | description": {
+    "message": "A képernyőolvasók nem tudják lefordítani a nem szövegalapú tartalmakat. Ha helyettesítő szöveget ad hozzá az `<object>` elemekhez, segíti a képernyőolvasókat a tartalmak értelmezésében a felhasználók számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/object-alt?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/object-alt.js | failureTitle": {
+    "message": "Bizonyos `<object>` elemek nem rendelkeznek `[alt]` szöveggel"
+  },
+  "lighthouse-core/audits/accessibility/object-alt.js | title": {
+    "message": "Az `<object>` elemek rendelkeznek `[alt]` szöveggel"
+  },
+  "lighthouse-core/audits/accessibility/tabindex.js | description": {
+    "message": "A 0-nál nagyobb érték explicit navigációs sorrendet jelent. Ez ugyan technikailag érvényes, azonban gyakran frusztráló felhasználói élményt nyújt a kisegítő technológiákra hagyatkozó személyek számára. [További információ](https://dequeuniversity.com/rules/axe/3.1/tabindex?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/tabindex.js | failureTitle": {
+    "message": "Bizonyos elemek 0-nál nagyobb `[tabindex]` értékkel rendelkeznek"
+  },
+  "lighthouse-core/audits/accessibility/tabindex.js | title": {
+    "message": "Egy elemnek sincs 0-nál nagyobb `[tabindex]` értéke"
+  },
+  "lighthouse-core/audits/accessibility/td-headers-attr.js | description": {
+    "message": "A képernyőolvasók rendelkeznek olyan funkciókkal, amelyek egyszerűbbé teszik a táblázatokban való navigációt. Annak biztosításával, hogy a `[headers]` attribútumot használó `<td>` cellák csak ugyanazon táblázat egyéb celláira hivatkoznak, javíthatja a képernyőolvasóra hagyatkozó felhasználók élményét. [További információ](https://dequeuniversity.com/rules/axe/3.1/td-headers-attr?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/td-headers-attr.js | failureTitle": {
+    "message": "A `<table>` elem `[headers]` attribútumot használó cellái ugyanazon táblázat másik celláira hivatkoznak."
+  },
+  "lighthouse-core/audits/accessibility/td-headers-attr.js | title": {
+    "message": "A `<table>` elem `[headers]` attribútumot használó cellái csak ugyanazon táblázat másik celláira hivatkoznak."
+  },
+  "lighthouse-core/audits/accessibility/th-has-data-cells.js | description": {
+    "message": "A képernyőolvasók rendelkeznek olyan funkciókkal, amelyek egyszerűbbé teszik a táblázatokban való navigációt. Annak biztosításával, hogy a táblák fejlécei mindig adott cellakészletre hivatkoznak, javíthatja a képernyőolvasóra hagyatkozó felhasználók élményét. [További információ](https://dequeuniversity.com/rules/axe/3.1/th-has-data-cells?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/th-has-data-cells.js | failureTitle": {
+    "message": "Bizonyos `<th>` elemeknél és `[role=\"columnheader\"/\"rowheader\"]` attribútummal rendelkező elemeknél hiányoznak az általuk leírt adatcellák."
+  },
+  "lighthouse-core/audits/accessibility/th-has-data-cells.js | title": {
+    "message": "A `<th>` elemeknél és `[role=\"columnheader\"/\"rowheader\"]` attribútummal rendelkező elemeknél megtalálhatók az általuk leírt adatcellák."
+  },
+  "lighthouse-core/audits/accessibility/valid-lang.js | description": {
+    "message": "Érvényes [BCP 47-nyelv](https://www.w3.org/International/questions/qa-choosing-language-tags#question) elemeknél való megadása segít biztosítani, hogy a szöveget helyes kiejtéssel olvassa fel a képernyőolvasó. [További információ](https://dequeuniversity.com/rules/axe/3.1/valid-lang?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/valid-lang.js | failureTitle": {
+    "message": "Bizonyos `[lang]` attribútumok nem rendelkeznek érvényes értékkel"
+  },
+  "lighthouse-core/audits/accessibility/valid-lang.js | title": {
+    "message": "A `[lang]` attribútumok érvényes értékkel rendelkeznek"
+  },
+  "lighthouse-core/audits/accessibility/video-caption.js | description": {
+    "message": "Ha a videóhoz felirat tartozik, a siket és hallássérült felhasználók egyszerűbben hozzájuthatnak a videóban található információkhoz. [További információ](https://dequeuniversity.com/rules/axe/3.1/video-caption?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/video-caption.js | failureTitle": {
+    "message": "Bizonyos `<video>` elemek nem tartalmaznak `<track>` elemet `[kind=\"captions\"]` attribútummal."
+  },
+  "lighthouse-core/audits/accessibility/video-caption.js | title": {
+    "message": "A `<video>` elemek tartalmaznak `<track>` elemet `[kind=\"captions\"]` attribútummal."
+  },
+  "lighthouse-core/audits/accessibility/video-description.js | description": {
+    "message": "Az audiokommentárok olyan fontos információkat nyújtanak a videókhoz, amelyek a párbeszédekből nem derülnek ki (ilyenek például az arckifejezések és a jelenetek leírása). [További információ](https://dequeuniversity.com/rules/axe/3.1/video-description?application=lighthouse)."
+  },
+  "lighthouse-core/audits/accessibility/video-description.js | failureTitle": {
+    "message": "Bizonyos `<video>` elemek nem tartalmaznak `<track>` elemet `[kind=\"description\"]` attribútummal."
+  },
+  "lighthouse-core/audits/accessibility/video-description.js | title": {
+    "message": "A `<video>` elemek tartalmaznak `<track>` elemet `[kind=\"description\"]` attribútummal."
+  },
+  "lighthouse-core/audits/bootup-time.js | chromeExtensionsWarning": {
+    "message": "Egyes Chrome-bővítmények kedvezőtlenül befolyásolták az oldal betöltési teljesítményét. Próbálkozzon az oldal inkognitómódban vagy bővítmények nélküli Chrome-profilból történő ellenőrzésével."
+  },
+  "lighthouse-core/audits/bootup-time.js | columnScriptEval": {
+    "message": "Szkriptértékelés"
+  },
+  "lighthouse-core/audits/bootup-time.js | columnScriptParse": {
+    "message": "Szkriptelemzés"
+  },
+  "lighthouse-core/audits/bootup-time.js | columnTotal": {
+    "message": "Teljes processzoridő"
+  },
+  "lighthouse-core/audits/bootup-time.js | description": {
+    "message": "Érdemes csökkenteni a JS elemzésére, összeállítására és végrehajtására fordított időt. Ebben segítségére lehet a kisebb JS-hasznosadat-forgalom. [További információ](https://developers.google.com/web/tools/lighthouse/audits/bootup)."
+  },
+  "lighthouse-core/audits/bootup-time.js | failureTitle": {
+    "message": "Csökkentse a JavaScript végrehajtási idejét"
+  },
+  "lighthouse-core/audits/bootup-time.js | title": {
+    "message": "JavaScript végrehajtási ideje"
+  },
+  "lighthouse-core/audits/byte-efficiency/efficient-animated-content.js | description": {
+    "message": "A nagy méretű GIF-ek nem megfelelők az animált tartalmak megjelenítéséhez. Érdemes MPEG4/WebM formátumú videókat használni az animációkhoz, illetve a PNG/WebP formátumot a statikus képekhez a GIF-ek helyett, hiszen így csökkenteni tudja a hálózati adatforgalmat. [További információ](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/replace-animated-gifs-with-video/)."
+  },
+  "lighthouse-core/audits/byte-efficiency/efficient-animated-content.js | title": {
+    "message": "Használjon videoformátumot az animált tartalmakhoz"
+  },
+  "lighthouse-core/audits/byte-efficiency/offscreen-images.js | description": {
+    "message": "Vegye fontolóra a képernyőn kívüli és a rejtett képek késleltetett, a kritikus erőforrások betöltődésének végét követő betöltését, az interaktivitásig tartó idő csökkentése érdekében. [További információ](https://developers.google.com/web/tools/lighthouse/audits/offscreen-images)."
+  },
+  "lighthouse-core/audits/byte-efficiency/offscreen-images.js | title": {
+    "message": "Késleltesse a képernyőn kívüli képek betöltését"
+  },
+  "lighthouse-core/audits/byte-efficiency/render-blocking-resources.js | description": {
+    "message": "Az erőforrások blokkolják az oldal első leképezését. Fontolja meg a kritikus JS/CSS beillesztését, továbbá az összes nem kritikus JS/stílus késleltetését. [További információ](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
+  },
+  "lighthouse-core/audits/byte-efficiency/render-blocking-resources.js | title": {
+    "message": "Távolítsa el a megjelenítést gátló erőforrásokat"
+  },
+  "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | description": {
+    "message": "A nagy hálózati terhelés valódi költséggel jár a felhasználóknak, és jelentősen megnöveli a betöltési időt. [További információ](https://developers.google.com/web/tools/lighthouse/audits/network-payloads)."
+  },
+  "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | displayValue": {
+    "message": "A teljes méret {totalBytes, number, bytes} kB volt"
+  },
+  "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | failureTitle": {
+    "message": "Kerülje a nagyon nagy hálózati hasznosadat-forgalmat"
+  },
+  "lighthouse-core/audits/byte-efficiency/total-byte-weight.js | title": {
+    "message": "A nagyon nagy hálózati terhelés elkerülése"
+  },
+  "lighthouse-core/audits/byte-efficiency/unminified-css.js | description": {
+    "message": "A CSS-fájlok minimalizálása csökkentheti a hálózati hasznosadat-forgalmat. [További információ](https://developers.google.com/web/tools/lighthouse/audits/minify-css)."
+  },
+  "lighthouse-core/audits/byte-efficiency/unminified-css.js | title": {
+    "message": "Minimalizálja a CSS-fájlokat"
+  },
+  "lighthouse-core/audits/byte-efficiency/unminified-javascript.js | description": {
+    "message": "A JavaScript-fájlok minimalizálásával csökkenthető a hasznosadat-forgalom és a szkriptelemzési idő. [További információ](https://developers.google.com/speed/docs/insights/MinifyResources)."
+  },
+  "lighthouse-core/audits/byte-efficiency/unminified-javascript.js | title": {
+    "message": "Minimalizálja a JavaScript-kódot"
+  },
+  "lighthouse-core/audits/byte-efficiency/unused-css-rules.js | description": {
+    "message": "A stíluslapok érvénytelen szabályainak eltávolításával és a hajtás feletti tartalomhoz nem használt CSS-kód betöltésének késleltetésével csökkentheti a hálózati tevékenység által felhasznált bájtmennyiséget. [További információ](https://developers.google.com/web/tools/lighthouse/audits/unused-css)."
+  },
+  "lighthouse-core/audits/byte-efficiency/unused-css-rules.js | title": {
+    "message": "Távolítsa el a nem használt CSS-kódot"
+  },
+  "lighthouse-core/audits/byte-efficiency/unused-javascript.js | description": {
+    "message": "A nem használt JavaScript-kód eltávolítása a hálózati tevékenység adatforgalmának csökkentéséhez."
+  },
+  "lighthouse-core/audits/byte-efficiency/unused-javascript.js | title": {
+    "message": "Távolítsa el a nem használt JavaScript-kódot"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | description": {
+    "message": "A hosszú gyorsítótári élettartam felgyorsíthatja az oldal ismételt látogatását. [További információ](https://developers.google.com/web/tools/lighthouse/audits/cache-policy)."
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | displayValue": {
+    "message": "{itemCount,plural, =1{1 erőforrás található}other{# erőforrás található}}"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | failureTitle": {
+    "message": "Jelenítse meg a statikus eszközöket hatékony gyorsítótár-házirend használatával"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-long-cache-ttl.js | title": {
+    "message": "Használjon hatékony gyorsítótár-házirendet a statikus eszközöknél"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-optimized-images.js | description": {
+    "message": "Az optimalizált képek gyorsabban töltődnek be, és kisebb mobiladat-forgalommal járnak. [További információ](https://developers.google.com/web/tools/lighthouse/audits/optimize-images)."
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-optimized-images.js | title": {
+    "message": "Kódolja hatékonyan a képeket"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-responsive-images.js | description": {
+    "message": "Használjon olyan képeket, amelyek megfelelő méretükkel elősegítik a mobiladat-forgalom csökkentését és a betöltési idő javulását. [További információ](https://developers.google.com/web/tools/lighthouse/audits/oversized-images)."
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-responsive-images.js | title": {
+    "message": "Méretezze megfelelően a képeket"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-text-compression.js | description": {
+    "message": "A szöveges alapú erőforrásokat tömörítéssel (gzip, Deflate vagy Brotli) célszerű megjeleníteni a teljes hálózati adatforgalom minimalizálása érdekében. [További információ](https://developers.google.com/web/tools/lighthouse/audits/text-compression)."
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-text-compression.js | title": {
+    "message": "Engedélyezze a szövegtömörítést"
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-webp-images.js | description": {
+    "message": "Az olyan képformátumok, mint a JPEG 2000, a JPEG XR és a WebP gyakran jobb tömörítést biztosítanak a PNG vagy a JPEG formátumnál, ami gyorsabb letöltést és kisebb adatforgalmat jelent. [További információ](https://developers.google.com/web/tools/lighthouse/audits/webp)."
+  },
+  "lighthouse-core/audits/byte-efficiency/uses-webp-images.js | title": {
+    "message": "Jelenítse meg a képeket következő generációs formátumokban"
+  },
+  "lighthouse-core/audits/critical-request-chains.js | description": {
+    "message": "Az alábbi kritikuslekérdezés-láncok megmutatják, hogy milyen források töltődnek be prioritással. Az oldalbetöltés javítása érdekében fontolja meg a láncok hosszának csökkentését, a letöltött erőforrások méretének csökkentését, vagy a felesleges erőforrások letöltésének késleltetését. [További információ.](https://developers.google.com/web/tools/lighthouse/audits/critical-request-chains)."
+  },
+  "lighthouse-core/audits/critical-request-chains.js | displayValue": {
+    "message": "{itemCount,plural, =1{1 lánc található}other{# lánc található}}"
+  },
+  "lighthouse-core/audits/critical-request-chains.js | title": {
+    "message": "Minimalizálja a kritikus lekérdezések mélységét"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | columnElement": {
+    "message": "Elem"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | columnStatistic": {
+    "message": "Jellemző"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | columnValue": {
+    "message": "Érték"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | description": {
+    "message": "A böngészőket fejlesztő mérnökök azt javasolják, hogy az oldalakon ~1500 DOM-elemnél kevesebb legyen. A legkedvezőbb a 32 elemnél kisebb és a 60 alárendelt/fölérendelt elemnél kisebb famélység. A nagy DOM növelheti a memóriahasználatot, és hosszabb [stílusszámítást](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), valamint költséges [elrendezés-újraszámítást](https://developers.google.com/speed/articles/reflow) eredményezhet. [További információ](https://developers.google.com/web/tools/lighthouse/audits/dom-size)."
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | displayValue": {
+    "message": "{itemCount,plural, =1{1 elem}other{# elem}}"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | failureTitle": {
+    "message": "Kerülje a túl nagy DOM-méretet"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMDepth": {
+    "message": "Maximális DOM-mélység"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMElements": {
+    "message": "DOM-elemek száma"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | statisticDOMWidth": {
+    "message": "Alárendelt elemek maximális száma"
+  },
+  "lighthouse-core/audits/dobetterweb/dom-size.js | title": {
+    "message": "Kerüli a túlzó DOM-méretet"
+  },
+  "lighthouse-core/audits/font-display.js | description": {
+    "message": "Használja a betűtípus-megjelenítő CSS-funkciót annak biztosításához, hogy a szöveg már a webes betűtípusok betöltődése alatt látható legyen a felhasználó számára. [További információ](https://developers.google.com/web/updates/2016/02/font-display)."
+  },
+  "lighthouse-core/audits/font-display.js | failureTitle": {
+    "message": "Biztosítsa, hogy a szöveg látható marad a webes betűtípusok betöltése során"
+  },
+  "lighthouse-core/audits/font-display.js | title": {
+    "message": "Az összes szöveg látható marad a webes betűtípusok betöltésekor"
+  },
+  "lighthouse-core/audits/load-fast-enough-for-pwa.js | description": {
+    "message": "A mobilhálózatokon való gyors oldalbetöltés jó mobilos felhasználói élményt jelent. [További információ](https://developers.google.com/web/tools/lighthouse/audits/fast-3g)."
+  },
+  "lighthouse-core/audits/load-fast-enough-for-pwa.js | displayValueText": {
+    "message": "Ennyi idő telt el az interaktivitásig: {timeInMs, number, seconds} s"
+  },
+  "lighthouse-core/audits/load-fast-enough-for-pwa.js | displayValueTextWithOverride": {
+    "message": "Ennyi idő telt el az interaktivitásig szimulált mobilhálózaton: {timeInMs, number, seconds} s"
+  },
+  "lighthouse-core/audits/load-fast-enough-for-pwa.js | failureTitle": {
+    "message": "Az oldalbetöltés nem elég gyors mobilhálózatokon"
+  },
+  "lighthouse-core/audits/load-fast-enough-for-pwa.js | title": {
+    "message": "Az oldalbetöltés kellően gyors mobilhálózatokon"
+  },
+  "lighthouse-core/audits/mainthread-work-breakdown.js | columnCategory": {
+    "message": "Kategória"
+  },
+  "lighthouse-core/audits/mainthread-work-breakdown.js | description": {
+    "message": "Érdemes csökkenteni a JS elemzésére, összeállítására és végrehajtására fordított időt. Ebben segítségére lehet a kisebb JS-hasznosadat-forgalom."
+  },
+  "lighthouse-core/audits/mainthread-work-breakdown.js | failureTitle": {
+    "message": "Minimalizálja a fő szál terhelését"
+  },
+  "lighthouse-core/audits/mainthread-work-breakdown.js | title": {
+    "message": "Minimalizálja a fő szál terhelését"
+  },
+  "lighthouse-core/audits/metrics/estimated-input-latency.js | description": {
+    "message": "Annak becsült értéke, hogy az alkalmazás mennyi idő alatt reagál – ezredmásodpercben (ms) megadva – a felhasználói adatbevitelre az oldalbetöltés legforgalmasabb 5 másodperces időkeretében. Ha a várakozási idő meghaladja az 50 ms-ot, a felhasználók késlekedést észlelhetnek az alkalmazás használata közben. [További információ](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)."
+  },
+  "lighthouse-core/audits/metrics/estimated-input-latency.js | title": {
+    "message": "Becsült bemeneti késés"
+  },
+  "lighthouse-core/audits/metrics/first-contentful-paint.js | description": {
+    "message": "Az első vizuális tartalomválasz azt az időpontot jelöli, amikor a rendszer megkezdi az első szöveg vagy kép megjelenítését. [További információ.](https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint)."
+  },
+  "lighthouse-core/audits/metrics/first-contentful-paint.js | title": {
+    "message": "Első, tartalommal rendelkező leképezés"
+  },
+  "lighthouse-core/audits/metrics/first-cpu-idle.js | description": {
+    "message": "Az első processzor-üresjárat mutató az első olyan alkalmat jelöli, amikor az oldal főszálának aktivitása elég alacsony ahhoz, hogy kezelni lehessen a bevitt mennyiséget. [További információ](https://developers.google.com/web/tools/lighthouse/audits/first-interactive)."
+  },
+  "lighthouse-core/audits/metrics/first-cpu-idle.js | title": {
+    "message": "Első processzor-üresjárat"
+  },
+  "lighthouse-core/audits/metrics/first-meaningful-paint.js | description": {
+    "message": "Az első releváns leképezés azt méri, hogy mikor válik láthatóvá az adott oldal elsődleges tartalma. [További információ](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint)."
+  },
+  "lighthouse-core/audits/metrics/first-meaningful-paint.js | title": {
+    "message": "Első releváns leképezés"
+  },
+  "lighthouse-core/audits/metrics/interactive.js | description": {
+    "message": "Az interaktivitásig eltelt idő az az időmennyiség, amely ahhoz szükséges, hogy az oldal teljesen interaktívvá váljon. [További információ](https://developers.google.com/web/tools/lighthouse/audits/consistently-interactive)."
+  },
+  "lighthouse-core/audits/metrics/interactive.js | title": {
+    "message": "Interaktivitásig eltelt idő"
+  },
+  "lighthouse-core/audits/metrics/max-potential-fid.js | description": {
+    "message": "A felhasználók által tapasztalható, első interakciótól számított esetleges válaszkésés (First Input Delay, FID) a leghosszabb feladat időtartama (ezredmásodpercben)."
+  },
+  "lighthouse-core/audits/metrics/max-potential-fid.js | title": {
+    "message": "Legnagyobb lehetséges FID"
+  },
+  "lighthouse-core/audits/metrics/speed-index.js | description": {
+    "message": "A Sebességindex mutató azt jelzi, hogy az adott oldal tartalmai milyen gyorsan válnak láthatóvá. [További információ](https://developers.google.com/web/tools/lighthouse/audits/speed-index)."
+  },
+  "lighthouse-core/audits/metrics/speed-index.js | title": {
+    "message": "Sebességindex"
+  },
+  "lighthouse-core/audits/network-rtt.js | description": {
+    "message": "A hálózati oda-vissza út ideje (round trip time, RTT) nagy hatással van a teljesítményre. Ha túl magas az RTT értéke valamelyik eredet esetében, az azt jelenti, hogy a felhasználóhoz közelebbi szerverek javíthatják a teljesítményt. [További információ](https://hpbn.co/primer-on-latency-and-bandwidth/)."
+  },
+  "lighthouse-core/audits/network-rtt.js | title": {
+    "message": "Oda-visszautak ideje a hálózaton"
+  },
+  "lighthouse-core/audits/network-server-latency.js | description": {
+    "message": "A szerverek várakozási ideje hatással lehet a webes teljesítményre. Ha valamelyik eredet szerverének várakozási ideje túl hosszú, az azt jelzi, hogy a szerver túl van terhelve, vagy hogy elégtelen a háttérrendszer teljesítménye. [További információ](https://hpbn.co/primer-on-web-performance/#analyzing-the-resource-waterfall)."
+  },
+  "lighthouse-core/audits/network-server-latency.js | title": {
+    "message": "Várakozási idő a háttérszervereknél"
+  },
+  "lighthouse-core/audits/redirects.js | description": {
+    "message": "Az átirányítások még azelőtt eredményeznek további késéseket, hogy az oldal betöltődhetne. [További információ](https://developers.google.com/web/tools/lighthouse/audits/redirects)."
+  },
+  "lighthouse-core/audits/redirects.js | title": {
+    "message": "Kerülje a többszörös oldalátirányítást"
+  },
+  "lighthouse-core/audits/seo/canonical.js | description": {
+    "message": "A gyűjtőlinkek a keresési eredményben megjelenítendő URL-ekre tesznek javaslatot. [További információ](https://developers.google.com/web/tools/lighthouse/audits/canonical)."
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationConflict": {
+    "message": "Több ütköző URL ({urlList})"
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationDifferentDomain": {
+    "message": "Másik domainre mutat ({url})"
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationInvalid": {
+    "message": "Érvénytelen URL ({url})"
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationPointsElsewhere": {
+    "message": "Másik „hreflang” helyre mutat ({url})"
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationRelative": {
+    "message": "Relatív URL ({url})"
+  },
+  "lighthouse-core/audits/seo/canonical.js | explanationRoot": {
+    "message": "A domain gyökér-URL-jére (a kezdőlapra) mutat egyenértékű tartalommal rendelkező oldal helyett"
+  },
+  "lighthouse-core/audits/seo/canonical.js | failureTitle": {
+    "message": "A dokumentum nem rendelkezik érvényes „rel=canonical” attribútummal"
+  },
+  "lighthouse-core/audits/seo/canonical.js | title": {
+    "message": "A dokumentum rendelkezik érvényes „rel=canonical” attribútummal"
+  },
+  "lighthouse-core/audits/seo/font-size.js | description": {
+    "message": "A 12 képpontnál kisebb betűméretek nehezen láthatók, ezért a mobilhasználóknak ki kell nagyítaniuk a képernyőt, hogy elolvashassák a szöveget. Törekedjen arra, hogy az oldal szövegének legalább 60%-a minimum 12 képpontos betűmérettel szerepeljen. [További információ](https://developers.google.com/web/tools/lighthouse/audits/font-sizes)."
+  },
+  "lighthouse-core/audits/seo/font-size.js | displayValue": {
+    "message": "A szöveg {decimalProportion, number, extendedPercent}-a olvasható"
+  },
+  "lighthouse-core/audits/seo/font-size.js | explanation": {
+    "message": "A szöveg {decimalProportion, number, extendedPercent}-a túl kicsi."
+  },
+  "lighthouse-core/audits/seo/font-size.js | explanationViewport": {
+    "message": "A szöveg olvashatatlan, ugyanis a látható terület metacímkéje nincs optimalizálva a mobilképernyőkre"
+  },
+  "lighthouse-core/audits/seo/font-size.js | explanationWithDisclaimer": {
+    "message": "A szöveg {decimalProportion, number, extendedPercent}-a túl kicsi ({decimalProportionVisited, number, extendedPercent}-os minta alapján)."
+  },
+  "lighthouse-core/audits/seo/font-size.js | failureTitle": {
+    "message": "A dokumentum olvashatatlan betűméreteket használ"
+  },
+  "lighthouse-core/audits/seo/font-size.js | title": {
+    "message": "A dokumentum olvasható betűméreteket tartalmaz"
+  },
+  "lighthouse-core/audits/seo/hreflang.js | description": {
+    "message": "A hreflang linkek azt mondják meg a keresőmotoroknak, hogy az oldal melyik változatát kell megjeleníteniük a keresési találatokban egy adott nyelv vagy régió esetében. [További információ](https://developers.google.com/web/tools/lighthouse/audits/hreflang)."
+  },
+  "lighthouse-core/audits/seo/hreflang.js | failureTitle": {
+    "message": "A dokumentum nem rendelkezik érvényes „hreflang” attribútummal"
+  },
+  "lighthouse-core/audits/seo/hreflang.js | title": {
+    "message": "A dokumentum rendelkezik érvényes „hreflang” attribútummal"
+  },
+  "lighthouse-core/audits/seo/http-status-code.js | description": {
+    "message": "A sikertelenséget jelző HTTP-állapotkóddal rendelkező oldalak indexelése eredménytelen lehet. [További információ](https://developers.google.com/web/tools/lighthouse/audits/successful-http-code)."
+  },
+  "lighthouse-core/audits/seo/http-status-code.js | failureTitle": {
+    "message": "Az oldal sikertelenséget jelző HTTP-állapotkóddal rendelkezik"
+  },
+  "lighthouse-core/audits/seo/http-status-code.js | title": {
+    "message": "Az oldal sikerességet jelző HTTP-állapotkóddal rendelkezik"
+  },
+  "lighthouse-core/audits/seo/is-crawlable.js | description": {
+    "message": "A keresőmotorok nem tudják megjeleníteni az oldalakat a keresési eredményben, ha nincs engedélyük a feltérképezésükre. [További információ](https://developers.google.com/web/tools/lighthouse/audits/indexing)."
+  },
+  "lighthouse-core/audits/seo/is-crawlable.js | failureTitle": {
+    "message": "Az oldal indexelését letiltották"
+  },
+  "lighthouse-core/audits/seo/is-crawlable.js | title": {
+    "message": "Az oldalnál nincs letiltva az indexelés"
+  },
+  "lighthouse-core/audits/seo/link-text.js | description": {
+    "message": "A leíró jellegű linkszöveg segít a keresőmotoroknak a tartalom értelmezésében. [További információ](https://developers.google.com/web/tools/lighthouse/audits/descriptive-link-text)."
+  },
+  "lighthouse-core/audits/seo/link-text.js | displayValue": {
+    "message": "{itemCount,plural, =1{1 link található}other{# link található}}"
+  },
+  "lighthouse-core/audits/seo/link-text.js | failureTitle": {
+    "message": "A linkek nem rendelkeznek leíró jellegű szöveggel"
+  },
+  "lighthouse-core/audits/seo/link-text.js | title": {
+    "message": "A linkek leíró jellegű szöveggel rendelkeznek"
+  },
+  "lighthouse-core/audits/seo/manual/structured-data.js | description": {
+    "message": "A strukturált adatok ellenőrzéséhez használja a [Strukturált adatok tesztelőeszközét](https://search.google.com/structured-data/testing-tool/) és a [Structured Data Linter](http://linter.structured-data.org/) eszközt. [További információ](https://developers.google.com/search/docs/guides/mark-up-content)."
+  },
+  "lighthouse-core/audits/seo/manual/structured-data.js | title": {
+    "message": "A strukturált adatok érvényesek"
+  },
+  "lighthouse-core/audits/seo/meta-description.js | description": {
+    "message": "Az oldaltartalmat tömören összefoglaló metaleírások megjelenhetnek a keresési eredményben. [További információ](https://developers.google.com/web/tools/lighthouse/audits/description)."
+  },
+  "lighthouse-core/audits/seo/meta-description.js | explanation": {
+    "message": "A Leírás mező üres."
+  },
+  "lighthouse-core/audits/seo/meta-description.js | failureTitle": {
+    "message": "A dokumentum nem rendelkezik metaleírással"
+  },
+  "lighthouse-core/audits/seo/meta-description.js | title": {
+    "message": "A dokumentum rendelkezik metaleírással"
+  },
+  "lighthouse-core/audits/seo/plugins.js | description": {
+    "message": "A keresőmotorok nem tudják indexelni a beépülő modulok tartalmát, és sok eszköz korlátozza vagy nem támogatja a beépülő modulokat. [További információ](https://developers.google.com/web/tools/lighthouse/audits/plugins)."
+  },
+  "lighthouse-core/audits/seo/plugins.js | failureTitle": {
+    "message": "A dokumentum beépülő modulokat használ"
+  },
+  "lighthouse-core/audits/seo/plugins.js | title": {
+    "message": "A dokumentum nem használ beépülő modulokat"
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | description": {
+    "message": "Ha a robots.txt fájl formázása rossz, előfordulhat, hogy a feltérképező robotok nem tudják értelmezni, hogy Ön hogyan szeretné feltérképeztetni vagy indexeltetni a webhelyét."
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | displayValueHttpBadCode": {
+    "message": "A robots.txt fájlra irányuló kérésre a következő HTTP-állapotkód érkezett vissza: {statusCode}"
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | displayValueValidationError": {
+    "message": "{itemCount,plural, =1{1 hiba található}other{# hiba található}}"
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | explanation": {
+    "message": "A Lighthouse nem tudta letölteni a robots.txt fájlt"
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | failureTitle": {
+    "message": "A robots.txt fájl nem érvényes"
+  },
+  "lighthouse-core/audits/seo/robots-txt.js | title": {
+    "message": "A robots.txt fájl érvényes"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | description": {
+    "message": "A nagy méretű (48 × 48 képpont) gombok, linkek és más interaktív elemek körül elég területnek kell lennie ahhoz, hogy a felhasználó ne érjen hozzá más elemekhez, amikor rájuk koppint. [További információ](https://developers.google.com/web/fundamentals/accessibility/accessible-styles#multi-device_responsive_design)."
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | displayValue": {
+    "message": "A koppintási célok {decimalProportion, number, percent}-a megfelelő méretű"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | explanationViewportMetaNotOptimized": {
+    "message": "A koppintási célok túl kicsik, ugyanis a látható terület metacímkéje nincs optimalizálva a mobilképernyőkre"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | failureTitle": {
+    "message": "A koppintási célok mérete nem megfelelő"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | overlappingTargetHeader": {
+    "message": "Átfedésben lévő cél"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | sizeHeader": {
+    "message": "Méret"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | tapTargetHeader": {
+    "message": "Koppintási cél"
+  },
+  "lighthouse-core/audits/seo/tap-targets.js | title": {
+    "message": "A koppintási célok mérete megfelelő"
+  },
+  "lighthouse-core/audits/time-to-first-byte.js | description": {
+    "message": "Az „első bájtig eltelt idő” mutató az Ön szervere válaszidejét jelöli. [További információ](https://developers.google.com/web/tools/lighthouse/audits/ttfb)."
+  },
+  "lighthouse-core/audits/time-to-first-byte.js | displayValue": {
+    "message": "A gyökérdokumentum betöltése ennyi időt vett igénybe: {timeInMs, number, milliseconds} ms"
+  },
+  "lighthouse-core/audits/time-to-first-byte.js | failureTitle": {
+    "message": "Csökkentse a szerver válaszidejét (TTFB)"
+  },
+  "lighthouse-core/audits/time-to-first-byte.js | title": {
+    "message": "Alacsony a szerver válaszideje (TTFB)"
+  },
+  "lighthouse-core/audits/user-timings.js | columnDuration": {
+    "message": "Időtartam"
+  },
+  "lighthouse-core/audits/user-timings.js | columnName": {
+    "message": "Név"
+  },
+  "lighthouse-core/audits/user-timings.js | columnStartTime": {
+    "message": "Kezdés ideje"
+  },
+  "lighthouse-core/audits/user-timings.js | columnType": {
+    "message": "Típus"
+  },
+  "lighthouse-core/audits/user-timings.js | description": {
+    "message": "Érdemes felhasználnia alkalmazásában a User Timing API-t, amellyel valós használat során mért teljesítményadatokat kaphat a legfontosabb felhasználói műveletekről. [További információ.](https://developers.google.com/web/tools/lighthouse/audits/user-timing)."
+  },
+  "lighthouse-core/audits/user-timings.js | displayValue": {
+    "message": "{itemCount,plural, =1{1 felhasználói időmérés}other{# felhasználói időmérés}}"
+  },
+  "lighthouse-core/audits/user-timings.js | title": {
+    "message": "Felhasználói időzítőjelek és intézkedések"
+  },
+  "lighthouse-core/audits/uses-rel-preconnect.js | crossoriginWarning": {
+    "message": "Előcsatlakozási <link> található a \"{securityOrigin}\" objektumnál, de nem használja a böngésző. Ellenőrizze, hogy megfelelően használja-e a „crossorigin” attribútumot."
+  },
+  "lighthouse-core/audits/uses-rel-preconnect.js | description": {
+    "message": "Vegye fontolóra előcsatlakozási vagy előzetes DNS-lehívási erőforrástippek hozzáadását, hogy korai kapcsolatokat hozhasson létre harmadik felek fontos forrásaival. [További információ](https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect)."
+  },
+  "lighthouse-core/audits/uses-rel-preconnect.js | title": {
+    "message": "Csatlakozzon előre a szükséges forrásokhoz"
+  },
+  "lighthouse-core/audits/uses-rel-preload.js | crossoriginWarning": {
+    "message": "A „{preloadURL}” előtöltési <link> elemmel rendelkezik, de a böngésző nem használta. Ellenőrizze, hogy megfelelően használja-e a „crossorigin” attribútumot."
+  },
+  "lighthouse-core/audits/uses-rel-preload.js | description": {
+    "message": "Fontolja meg a <link rel=preload> parancs használatát az olyan erőforrások lekérdezésének rangsorolásához, amelyek az adott pillanatban az oldal betöltése során később következőként szerepelnek. [További információ](https://developers.google.com/web/tools/lighthouse/audits/preload)."
+  },
+  "lighthouse-core/audits/uses-rel-preload.js | title": {
+    "message": "Töltse be előre a kulcsfontosságú kéréseket"
+  },
+  "lighthouse-core/config/default-config.js | a11yAriaGroupDescription": {
+    "message": "Ezek a lehetőségek segíthetnek az ARIA alkalmazásban való használatának javításában, ami jobb felhasználói élményt biztosíthat a kisegítő technológiákat (például képernyőolvasót) használó személyeknek."
+  },
+  "lighthouse-core/config/default-config.js | a11yAriaGroupTitle": {
+    "message": "ARIA"
+  },
+  "lighthouse-core/config/default-config.js | a11yAudioVideoGroupDescription": {
+    "message": "Több lehetőség van, melyek révén alternatív tartalmakat biztosíthat videókhoz és hanganyagokhoz. Ezzel javíthatja a hallás- és látássérült felhasználók élményét."
+  },
+  "lighthouse-core/config/default-config.js | a11yAudioVideoGroupTitle": {
+    "message": "Hang- és videohívások"
+  },
+  "lighthouse-core/config/default-config.js | a11yBestPracticesGroupDescription": {
+    "message": "Itt a kisegítő lehetőségekkel kapcsolatos bevált módszereket találja."
+  },
+  "lighthouse-core/config/default-config.js | a11yBestPracticesGroupTitle": {
+    "message": "Bevált módszerek"
+  },
+  "lighthouse-core/config/default-config.js | a11yCategoryDescription": {
+    "message": "Ezek az ellenőrzések kiemelik az [internetes alkalmazás kisegítő lehetőségeinek javítására] irányuló lehetőségeket(https://developers.google.com/web/fundamentals/accessibility). A kisegítő lehetőségekkel kapcsolatos problémáknak csak egy részét lehet automatikusan észlelni, ezért manuális ellenőrzés végrehajtása is ajánlott."
+  },
+  "lighthouse-core/config/default-config.js | a11yCategoryManualDescription": {
+    "message": "Ezek az elemek automatikus tesztelőeszközzel ellenőrizhetetlen területeken vannak. Olvassa el a [kisegítő lehetőségek felülvizsgálatáról](https://developers.google.com/web/fundamentals/accessibility/how-to-review) szóló útmutatónkat."
+  },
+  "lighthouse-core/config/default-config.js | a11yCategoryTitle": {
+    "message": "Kisegítő lehetőségek"
+  },
+  "lighthouse-core/config/default-config.js | a11yColorContrastGroupDescription": {
+    "message": "Ezek a lehetőségek a tartalom olvashatóságát segítik."
+  },
+  "lighthouse-core/config/default-config.js | a11yColorContrastGroupTitle": {
+    "message": "Kontraszt"
+  },
+  "lighthouse-core/config/default-config.js | a11yLanguageGroupDescription": {
+    "message": "Ezek a lehetőségek a tartalom különböző országokban élő felhasználók általi értelmezését segítik."
+  },
+  "lighthouse-core/config/default-config.js | a11yLanguageGroupTitle": {
+    "message": "Nemzetközi megoldások és honosítás"
+  },
+  "lighthouse-core/config/default-config.js | a11yNamesLabelsGroupDescription": {
+    "message": "Ezek a lehetőségek az alkalmazás szemantikai jellemzőinek fejlesztését segítik. Javíthatják a kisegítő technológiákat (például képernyőolvasót) használó személyek felhasználói élményét."
+  },
+  "lighthouse-core/config/default-config.js | a11yNamesLabelsGroupTitle": {
+    "message": "Nevek és címkék"
+  },
+  "lighthouse-core/config/default-config.js | a11yNavigationGroupDescription": {
+    "message": "Több lehetőség is van a billentyűzettel való navigáció fejlesztésére az alkalmazásban."
+  },
+  "lighthouse-core/config/default-config.js | a11yNavigationGroupTitle": {
+    "message": "Navigáció"
+  },
+  "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupDescription": {
+    "message": "Ezek a lehetőségek a táblázatos és listaformátumú adatok olvasási élményét javítják olyan kisegítő technológiák használata esetén, mint a képernyőolvasó."
+  },
+  "lighthouse-core/config/default-config.js | a11yTablesListsVideoGroupTitle": {
+    "message": "Táblázatok és listák"
+  },
+  "lighthouse-core/config/default-config.js | diagnosticsGroupDescription": {
+    "message": "További információ alkalmazása teljesítményéről."
+  },
+  "lighthouse-core/config/default-config.js | diagnosticsGroupTitle": {
+    "message": "Diagnosztika"
+  },
+  "lighthouse-core/config/default-config.js | firstPaintImprovementsGroupDescription": {
+    "message": "A teljesítmény legfontosabb szempontja az, hogy milyen gyorsan jelennek meg a képpontok a képernyőn. Legfontosabb mutatók: Első, tartalommal rendelkező leképezés, Első releváns leképezés"
+  },
+  "lighthouse-core/config/default-config.js | firstPaintImprovementsGroupTitle": {
+    "message": "Az első leképezést érintő fejlesztések"
+  },
+  "lighthouse-core/config/default-config.js | loadOpportunitiesGroupDescription": {
+    "message": "Ezek az optimalizációk felgyorsíthatják oldala betöltési idejét."
+  },
+  "lighthouse-core/config/default-config.js | loadOpportunitiesGroupTitle": {
+    "message": "Lehetőségek"
+  },
+  "lighthouse-core/config/default-config.js | metricGroupTitle": {
+    "message": "Mutatók"
+  },
+  "lighthouse-core/config/default-config.js | overallImprovementsGroupDescription": {
+    "message": "Növelje az átfogó betöltési élményt annak érdekében, hogy az oldal reszponzív legyen, és a lehető legrövidebb időn belül használhatóvá váljon. Főbb mutatók: interaktivitásig eltelt idő, sebességindex"
+  },
+  "lighthouse-core/config/default-config.js | overallImprovementsGroupTitle": {
+    "message": "Átfogó javítások"
+  },
+  "lighthouse-core/config/default-config.js | performanceCategoryTitle": {
+    "message": "Teljesítmény"
+  },
+  "lighthouse-core/config/default-config.js | pwaFastReliableGroupTitle": {
+    "message": "Gyors és megbízható"
+  },
+  "lighthouse-core/config/default-config.js | pwaInstallableGroupTitle": {
+    "message": "Telepíthető"
+  },
+  "lighthouse-core/config/default-config.js | pwaOptimizedGroupTitle": {
+    "message": "PWA-optimalizálás"
+  },
+  "lighthouse-core/config/default-config.js | seoCategoryDescription": {
+    "message": "Ezekkel az ellenőrzésekkel győződhet meg arról, hogy oldala optimalizálva van a keresőmotorok találati rangsorolásához. Vannak olyan egyéb, a Lighthouse által nem ellenőrzött tényezők is, amelyek befolyásolhatják a keresésekben elért helyezést. [További információ](https://support.google.com/webmasters/answer/35769)."
+  },
+  "lighthouse-core/config/default-config.js | seoCategoryManualDescription": {
+    "message": "Ha ezeket a további érvényesítőket is futtatja webhelyén, egyéb bevált SEO-módszereket is ellenőrizhet."
+  },
+  "lighthouse-core/config/default-config.js | seoCategoryTitle": {
+    "message": "Keresőoptimalizálás"
+  },
+  "lighthouse-core/config/default-config.js | seoContentGroupDescription": {
+    "message": "Formázza úgy a HTML-kódot, hogy a feltérképező robotok jobban megérthessék az alkalmazás tartalmait."
+  },
+  "lighthouse-core/config/default-config.js | seoContentGroupTitle": {
+    "message": "Tartalommal kapcsolatos bevált módszerek"
+  },
+  "lighthouse-core/config/default-config.js | seoCrawlingGroupDescription": {
+    "message": "A feltérképező robotoknak hozzáférésre van szükségük az alkalmazáshoz annak érdekében, hogy a webhely megjelenhessen a keresési találatok között."
+  },
+  "lighthouse-core/config/default-config.js | seoCrawlingGroupTitle": {
+    "message": "Feltérképezés és indexelés"
+  },
+  "lighthouse-core/config/default-config.js | seoMobileGroupDescription": {
+    "message": "Gondoskodjon oldalai mobilbaráttá tételéről, hogy a felhasználóknak ne kelljen ráközelíteniük a tartalmak elolvasásához. [További információ](https://developers.google.com/search/mobile-sites/)."
+  },
+  "lighthouse-core/config/default-config.js | seoMobileGroupTitle": {
+    "message": "Mobilbarát"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnCacheTTL": {
+    "message": "Gyorsítótár-TTL"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnSize": {
+    "message": "Méret (kB)"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnTimeSpent": {
+    "message": "Eltöltött idő"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnURL": {
+    "message": "URL"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnWastedBytes": {
+    "message": "Potenciális megtakarítás (kB)"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | columnWastedMs": {
+    "message": "Potenciális megtakarítás (ms)"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | displayValueByteSavings": {
+    "message": "{wastedBytes, number, bytes} kB potenciális megtakarítás"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | displayValueMsSavings": {
+    "message": "Potenciális megtakarítás értéke: {wastedMs, number, milliseconds} ms"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | ms": {
+    "message": "{timeInMs, number, milliseconds} ms"
+  },
+  "lighthouse-core/lib/i18n/i18n.js | seconds": {
+    "message": "{timeInMs, number, seconds} s"
+  },
+  "lighthouse-core/lib/lh-error.js | badTraceRecording": {
+    "message": "Valami hiba történt a nyom rögzítésekor az oldal betöltése során. Futtassa újra a Lighthouse szolgáltatást. ({errorCode})"
+  },
+  "lighthouse-core/lib/lh-error.js | criTimeout": {
+    "message": "Időtúllépés a hibaelhárító protokoll kezdeti kapcsolatára való várakozás során."
+  },
+  "lighthouse-core/lib/lh-error.js | didntCollectScreenshots": {
+    "message": "A Chrome nem gyűjtött képernyőképeket az oldal betöltése során. Ellenőrizze, hogy van-e látható tartalom az oldalon, majd próbálja újra futtatni a Lighthouse szolgáltatást. ({errorCode})"
+  },
+  "lighthouse-core/lib/lh-error.js | dnsFailure": {
+    "message": "A DNS-szerverek nem tudták értelmezni a megadott domaint."
+  },
+  "lighthouse-core/lib/lh-error.js | internalChromeError": {
+    "message": "Belső Chrome-hiba történt. Indítsa újra a Chrome-ot, és próbálja újra futtatni a Lighthouse szolgáltatást."
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadFailed": {
+    "message": "A Lighthouse nem tudta megfelelően betölteni a kért oldalt. Győződjön meg arról, hogy a helyes URL-t teszteli, és a szerver megfelelően válaszol az összes kérelemre."
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadFailedHung": {
+    "message": "A Lighthouse nem tudta megfelelően betölteni a kért URL-t, mert az oldal nem válaszol."
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadFailedInsecure": {
+    "message": "A megadott URL nem rendelkezik érvényes biztonsági tanúsítvánnyal. {securityMessages}"
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadFailedWithDetails": {
+    "message": "A Lighthouse nem tudta megfelelően betölteni a kért oldalt. Győződjön meg arról, hogy a helyes URL-t teszteli, és a szerver megfelelően válaszol az összes kérelemre. (Részletek: {errorDetails})"
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadFailedWithStatusCode": {
+    "message": "A Lighthouse nem tudta megfelelően betölteni a kért oldalt. Győződjön meg arról, hogy a helyes URL-t teszteli, és a szerver megfelelően válaszol az összes kérelemre. (Állapotkód: {statusCode})"
+  },
+  "lighthouse-core/lib/lh-error.js | pageLoadTookTooLong": {
+    "message": "Túl sokáig tartott az oldal betöltése. Kövesse a jelentésben leírt lehetőséget az oldalbetöltési idő csökkentéséhez, majd próbálja újra futtatni a Lighthouse szolgáltatást. ({errorCode})"
+  },
+  "lighthouse-core/lib/lh-error.js | protocolTimeout": {
+    "message": "A DevTools protokoll válaszára való várakozás túllépte a megengedett időt. Módszer: {protocolMethod})"
+  },
+  "lighthouse-core/lib/lh-error.js | requestContentTimeout": {
+    "message": "A tartalom lekérése túllépte a megengedett időt"
+  },
+  "lighthouse-core/lib/lh-error.js | urlInvalid": {
+    "message": "Úgy tűnik, a megadott URL érvénytelen."
+  },
+  "lighthouse-core/report/html/renderer/util.js | auditGroupExpandTooltip": {
+    "message": "Ellenőrzések megjelenítése"
+  },
+  "lighthouse-core/report/html/renderer/util.js | crcInitialNavigation": {
+    "message": "Kezdeti navigáció"
+  },
+  "lighthouse-core/report/html/renderer/util.js | crcLongestDurationLabel": {
+    "message": "Kritikus elérési út maximális várakozási ideje:"
+  },
+  "lighthouse-core/report/html/renderer/util.js | errorLabel": {
+    "message": "Hiba!"
+  },
+  "lighthouse-core/report/html/renderer/util.js | errorMissingAuditInfo": {
+    "message": "Jelentési hiba: nincs ellenőrzési információ"
+  },
+  "lighthouse-core/report/html/renderer/util.js | labDataTitle": {
+    "message": "Laboradatok"
+  },
+  "lighthouse-core/report/html/renderer/util.js | lsPerformanceCategoryDescription": {
+    "message": "Az aktuális oldal [Lighthouse](https://developers.google.com/web/tools/lighthouse/)-elemzése emulált mobilhálózaton. Az értékek becsültek és változhatnak."
+  },
+  "lighthouse-core/report/html/renderer/util.js | manualAuditsGroupTitle": {
+    "message": "További manuálisan elemzendő elemek"
+  },
+  "lighthouse-core/report/html/renderer/util.js | notApplicableAuditsGroupTitle": {
+    "message": "Nem alkalmazható"
+  },
+  "lighthouse-core/report/html/renderer/util.js | opportunityResourceColumnLabel": {
+    "message": "Lehetőség"
+  },
+  "lighthouse-core/report/html/renderer/util.js | opportunitySavingsColumnLabel": {
+    "message": "Becsült megtakarítás"
+  },
+  "lighthouse-core/report/html/renderer/util.js | passedAuditsGroupTitle": {
+    "message": "Sikeresen teljesített ellenőrzések"
+  },
+  "lighthouse-core/report/html/renderer/util.js | snippetCollapseButtonLabel": {
+    "message": "Kódrészlet összecsukása"
+  },
+  "lighthouse-core/report/html/renderer/util.js | snippetExpandButtonLabel": {
+    "message": "Kódrészlet kibontása"
+  },
+  "lighthouse-core/report/html/renderer/util.js | toplevelWarningsMessage": {
+    "message": "A Lighthouse-futtatást befolyásoló problémák fordultak elő:"
+  },
+  "lighthouse-core/report/html/renderer/util.js | varianceDisclaimer": {
+    "message": "Az értékek becsültek és változhatnak."
+  },
+  "lighthouse-core/report/html/renderer/util.js | warningAuditsGroupTitle": {
+    "message": "Átment az ellenőrzéseken – figyelmeztetésekkel"
+  },
+  "lighthouse-core/report/html/renderer/util.js | warningHeader": {
+    "message": "Figyelmeztetések: "
+  },
+  "stack-packs/packs/wordpress.js | efficient_animated_content": {
+    "message": "Fontolja meg a GIF-fájlok olyan szolgáltatóhoz való feltöltését, amely lehetővé teszi a fájlok HTML5-videóként történő beágyazását."
+  },
+  "stack-packs/packs/wordpress.js | offscreen_images": {
+    "message": "Telepítsen [lusta betöltést biztosító WordPress-bővítményt](https://wordpress.org/plugins/search/lazy+load/), amely lehetőséget ad a képernyőn kívül eső képek késleltetett betöltésére – vagy váltson olyan témára, amely rendelkezik ezzel a funkcióval. Fontolja meg az [AMP-bővítmény](https://wordpress.org/plugins/amp/) használatát is."
+  },
+  "stack-packs/packs/wordpress.js | render_blocking_resources": {
+    "message": "Számos WordPress-bővítmény segíthet a [kritikus elemek beágyazásában](https://wordpress.org/plugins/search/critical+css/) vagy a [kevésbé fontos források késleltetésében](https://wordpress.org/plugins/search/defer+css+javascript/). Fontos, hogy az ilyen jellegű bővítmények által nyújtott optimalizációk működésképtelenné tehetik a témák vagy más bővítmények funkcióit, ezért valószínűleg módosítania kell majd a meglévő kódot."
+  },
+  "stack-packs/packs/wordpress.js | time_to_first_byte": {
+    "message": "A témák, a bővítmények és a szerver specifikációi mind befolyásolják a szerver válaszidejét. Érdemes lehet jobban optimalizált témát keresnie, megfelelő optimalizáló bővítményt választania és/vagy nagyobb teljesítményű szerverre váltania."
+  },
+  "stack-packs/packs/wordpress.js | total_byte_weight": {
+    "message": "Fontolja meg kivonatok megjelenítését a bejegyzéslistákban (pl. a more címkével), az oldalanként megjelenített bejegyzések számának csökkentését, a hosszabb bejegyzések több oldalra tördelését, valamint a hozzászólások lusta betöltését bővítmény segítségével."
+  },
+  "stack-packs/packs/wordpress.js | unminified_css": {
+    "message": "Számos [WordPress-bővítmény](https://wordpress.org/plugins/search/minify+css/) gyorsíthat webhelyén a stíluslapok egyesítésével, minimalizálásával és tömörítésével. Ha lehetséges, a minimalizálást érdemes lehet buildfolyamat használatával előre elvégezni."
+  },
+  "stack-packs/packs/wordpress.js | unminified_javascript": {
+    "message": "Számos [WordPress-bővítmény](https://wordpress.org/plugins/search/minify+javascript/) gyorsíthat webhelyén a szkriptek egyesítésével, minimalizálásával és tömörítésével. Ha lehetséges, a minimalizálást érdemes lehet buildfolyamat használatával előre elvégezni."
+  },
+  "stack-packs/packs/wordpress.js | unused_css_rules": {
+    "message": "Fontolja meg az oldalán a nem használt CSS-t betöltő [WordPress-bővítmények](https://wordpress.org/plugins/) lecserélését, illetve számuk csökkentését. A felesleges CSS-t elhelyező bővítmények azonosításában a Chrome DevTools [kódlefedettség](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage) funkciója is segíthet. A felelős téma vagy bővítmény a stíluslap URL-je alapján azonosítható. Keressen olyan bővítményeket, amelyeknek több stíluslapjában is sok piros szín szerepel a kódlefedettségi listán. Ideális esetben a bővítmények csak az oldalon ténylegesen használt stíluslapokat állítják sorba."
+  },
+  "stack-packs/packs/wordpress.js | unused_javascript": {
+    "message": "Fontolja meg az oldalán a nem használt JavaScriptet betöltő [WordPress-bővítmények](https://wordpress.org/plugins/) lecserélését, illetve számuk csökkentését. A felesleges JS-t elhelyező bővítmények azonosításában a Chrome DevTools [kódlefedettség](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage) funkciója is segíthet. A felelős téma vagy bővítmény a szkript URL-je alapján azonosítható. Keressen olyan bővítményeket, amelyeknek több szkriptjében is sok piros szín szerepel a kódlefedettségi listán. Ideális esetben a bővítmények csak az oldalon ténylegesen használt szkripteket állítják sorba."
+  },
+  "stack-packs/packs/wordpress.js | uses_long_cache_ttl": {
+    "message": "További információ: [Böngészős gyorsítótárazás a WordPress rendszerében](https://codex.wordpress.org/WordPress_Optimization#Browser_Caching)."
+  },
+  "stack-packs/packs/wordpress.js | uses_optimized_images": {
+    "message": "Fontolja meg [képoptimalizáló WordPress-bővítmény használatát](https://wordpress.org/plugins/search/optimize+images/), mellyel minőségromlás nélkül tömöríthetők a képek."
+  },
+  "stack-packs/packs/wordpress.js | uses_responsive_images": {
+    "message": "A képeket közvetlenül a [Media Library](https://codex.wordpress.org/Media_Library_Screen) oldalán keresztül töltse fel, hogy biztosan rendelkezésre álljanak a szükséges képméretek. Ezt követően pedig a Media Library oldaláról vagy az Image Widget bővítménnyel illessze be őket, hogy az optimális képméreteket alkalmazhassa (a reszponzív töréspontok esetében is). Teljes méretű képeket csak akkor használjon, ha méretük megfelel a felhasználás módjának. [További információ](https://codex.wordpress.org/Inserting_Images_into_Posts_and_Pages#Image_Size)."
+  },
+  "stack-packs/packs/wordpress.js | uses_text_compression": {
+    "message": "A szövegtömörítést a webszerver konfigurációjában engedélyezheti."
+  },
+  "stack-packs/packs/wordpress.js | uses_webp_images": {
+    "message": "Fontolja meg olyan [bővítmény](https://wordpress.org/plugins/search/convert+webp/) vagy szolgáltatás használatát, amely automatikusan optimális formátumba konvertálja a feltöltött képeket."
+  }
+}
