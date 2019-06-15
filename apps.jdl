@@ -4,7 +4,7 @@ application {
     applicationType monolith,
     clientFramework angularX,
     packageName tech.jhipster.angular.demo,
-    serverPort 8081
+    serverPort 8080
 
     authenticationType jwt,
     prodDatabaseType mysql,
@@ -21,7 +21,7 @@ application {
     applicationType monolith,
     clientFramework react,
     packageName tech.jhipster.react.demo,
-    serverPort 8082
+    serverPort 8081
 
     authenticationType jwt,
     prodDatabaseType mysql,
@@ -38,7 +38,7 @@ application {
     applicationType monolith,
     clientFramework vuejs,
     packageName tech.jhipster.react.demo,
-    serverPort 8083
+    serverPort 8082
 
     authenticationType jwt,
     prodDatabaseType mysql,
