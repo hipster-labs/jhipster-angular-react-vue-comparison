@@ -2,38 +2,6 @@
 'use strict';
 
 module.exports = {
-  passes: [{
-    passName: 'defaultPass',
-    recordTrace: true,
-    pauseAfterLoadMs: 5250,
-    networkQuietThresholdMs: 5250,
-    cpuQuietThresholdMs: 5250,
-    useThrottling: true,
-    gatherers: [
-      'url',
-      'scripts',
-      'css-usage',
-      'viewport',
-      'viewport-dimensions',
-      'theme-color',
-      'manifest',
-      'runtime-exceptions',
-      'chrome-console-messages',
-      'image-usage',
-      'accessibility',
-      'dobetterweb/all-event-listeners',
-      'dobetterweb/anchors-with-no-rel-noopener',
-      'dobetterweb/appcache',
-      'dobetterweb/domstats',
-      'dobetterweb/js-libraries',
-      'dobetterweb/optimized-images',
-      'dobetterweb/password-inputs-with-prevented-paste',
-      'dobetterweb/response-compression',
-      'dobetterweb/tags-blocking-first-paint',
-      'dobetterweb/websql',
-      'fonts',
-    ],
-  }],
   audits: [
     'first-meaningful-paint',
     'first-interactive',
