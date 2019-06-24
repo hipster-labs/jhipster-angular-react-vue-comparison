@@ -1,0 +1,58 @@
+version: '2'
+services:
+  angular-app:
+    image: pbesson/angular:6.1.2
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://angular-mysql:3306/angular?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+    ports:
+      - '8080:8081'
+  angular-mysql:
+    image: 'mysql:8.0.16'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=angular
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  react-app:
+    image: pbesson/react:6.1.2
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://react-mysql:3306/react?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+    ports:
+      - '8081:8082'
+  react-mysql:
+    image: 'mysql:8.0.16'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=react
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
+
+  vuejs-app:
+    image: pbesson/vuejs:6.1.2
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - 'SPRING_PROFILES_ACTIVE=prod,swagger'
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://vuejs-mysql:3306/vuejs?useUnicode=true&characterEncoding=utf8&useSSL=false'
+      - JHIPSTER_SLEEP=30
+      - JHIPSTER_REGISTRY_PASSWORD=admin
+    ports:
+      - '8082:8083'
+  vuejs-mysql:
+    image: 'mysql:8.0.16'
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=vuejs
+    command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp

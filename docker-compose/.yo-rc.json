@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "docker-compose",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "directoryPath": "../",
+    "appsFolders": [
+      "angular",
+      "react",
+      "vuejs"
+    ],
+    "clusteredDbApps": [],
+    "consoleOptions": [],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "pbesson",
+    "dockerPushCommand": "docker push",
+    "jwtSecretKey": "YmY5YjI2ZjA2YzVmZDI4ODk1MTkxNGJhMzU5ZjUxOGMyMGUzYjY0MDNjODA5YjNiYTlmZDEyZDk4NTYwZGU4ZmQ2OTFiNDFkOTMzNTA3NTRmY2RkMDZlOTdiM2FhM2EzZmM1MQ=="
+  }
+}
