@@ -9,7 +9,7 @@ done
 
 # Tag and push docker images
 dockerRepositoryName="pbesson"
-tag="6.1.0"
+tag="6.1.2"
 for app in "${apps[@]}";
 do
     docker tag $app $dockerRepositoryName/$app:$tag
