@@ -1,0 +1,73 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="angularApp.customer.home.title">Customers</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer" [routerLink]="['/customer/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="angularApp.customer.home.createLabel">
+            Create new Customer
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="customers?.length === 0">
+        <span jhiTranslate="angularApp.customer.home.notFound">No customers found</span>
+    </div>
+    <div class="table-responsive" *ngIf="customers?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="angularApp.customer.firstName">First Name</span></th>
+            <th><span jhiTranslate="angularApp.customer.lastName">Last Name</span></th>
+            <th><span jhiTranslate="angularApp.customer.gender">Gender</span></th>
+            <th><span jhiTranslate="angularApp.customer.email">Email</span></th>
+            <th><span jhiTranslate="angularApp.customer.phone">Phone</span></th>
+            <th><span jhiTranslate="angularApp.customer.addressLine1">Address Line 1</span></th>
+            <th><span jhiTranslate="angularApp.customer.addressLine2">Address Line 2</span></th>
+            <th><span jhiTranslate="angularApp.customer.city">City</span></th>
+            <th><span jhiTranslate="angularApp.customer.country">Country</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let customer of customers ;trackBy: trackId">
+                <td><a [routerLink]="['/customer', customer.id, 'view' ]">{{customer.id}}</a></td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td jhiTranslate="{{'angularApp.Gender.' + customer.gender}}">{{customer.gender}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.addressLine1}}</td>
+                <td>{{customer.addressLine2}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.country}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/customer', customer.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/customer', customer.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'customer', { outlets: { popup: customer.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

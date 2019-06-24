@@ -1,0 +1,47 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "tech.jhipster.react.demo",
+    "packageFolder": "tech/jhipster/react/demo",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": false,
+    "skipClient": false,
+    "skipServer": false,
+    "testFrameworks": [
+      "protractor",
+      "gatling"
+    ],
+    "websocket": false,
+    "baseName": "vuejs",
+    "applicationType": "monolith",
+    "clientFramework": "vuejs",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "buildTool": "maven",
+    "jhipsterVersion": "6.1.2",
+    "skipUserManagement": false,
+    "clientPackageManager": "npm",
+    "useSass": true,
+    "jwtSecretKey": "MTdiYzE0ODRlZWEzZTgyMGU0ZThlMWM5NzZlYTNjYjkwZmMwYjRmYTA1MDFlZTEyZjhjMTQ4MmRkNTBiYmUzZjQzNjIxMmRiMmIxMjdlZjQ1M2IyMTY2MjcxNmJlNWVkODg5ZTc0ODJjZTFlNjlmZmZkY2UwZTI5YWMwNzdjODY=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "entities": [
+    "Customer"
+  ]
+}

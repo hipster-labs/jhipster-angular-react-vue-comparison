@@ -1,0 +1,47 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "tech.jhipster.angular.demo",
+    "packageFolder": "tech/jhipster/angular/demo",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": false,
+    "skipClient": false,
+    "skipServer": false,
+    "testFrameworks": [
+      "protractor",
+      "gatling"
+    ],
+    "websocket": false,
+    "baseName": "angular",
+    "applicationType": "monolith",
+    "clientFramework": "angularX",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "buildTool": "maven",
+    "jhipsterVersion": "6.1.2",
+    "skipUserManagement": false,
+    "clientPackageManager": "npm",
+    "useSass": true,
+    "jwtSecretKey": "ZTlkZjZmODY3MmQ5MTVlZTdiNTU1OTMzMWE3MzhkMTQ2NmU4ZTcwMTk5NDYzNTA3ZTY0OWZlMjQxNjU3MjM1YWI3NWUyOTlkMDUxMTBiNDQ2ZmQ4YjY5OGE3MmFlODYwYWU2YWU0OWM3NDEyM2IyZWY1ZDExNTQwMmUyNWY5NGU=",
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "entities": [
+    "Customer"
+  ]
+}
