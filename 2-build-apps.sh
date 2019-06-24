@@ -13,6 +13,6 @@ tag="6.1.2"
 for app in "${apps[@]}";
 do
     docker tag $app $dockerRepositoryName/$app:$tag
-    #docker push $dockerRepositoryName/$app:$tag
+    docker push $dockerRepositoryName/$app:$tag
 done
 
