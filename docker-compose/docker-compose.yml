@@ -9,7 +9,6 @@ services:
       - 'SPRING_DATASOURCE_URL=jdbc:mysql://angular-mysql:3306/angular?useUnicode=true&characterEncoding=utf8&useSSL=false'
       - JHIPSTER_SLEEP=30
       - JHIPSTER_REGISTRY_PASSWORD=admin
-      - SPRING_LIQUIBASE_CONTEXTS=prod,faker
     ports:
       - '8080:8080'
   angular-mysql:
@@ -29,7 +28,6 @@ services:
       - 'SPRING_DATASOURCE_URL=jdbc:mysql://react-mysql:3306/react?useUnicode=true&characterEncoding=utf8&useSSL=false'
       - JHIPSTER_SLEEP=30
       - JHIPSTER_REGISTRY_PASSWORD=admin
-      - SPRING_LIQUIBASE_CONTEXTS=prod,faker
     ports:
       - '8081:8081'
   react-mysql:
@@ -49,7 +47,6 @@ services:
       - 'SPRING_DATASOURCE_URL=jdbc:mysql://vuejs-mysql:3306/vuejs?useUnicode=true&characterEncoding=utf8&useSSL=false'
       - JHIPSTER_SLEEP=30
       - JHIPSTER_REGISTRY_PASSWORD=admin
-      - SPRING_LIQUIBASE_CONTEXTS=prod,faker
     ports:
       - '8082:8082'
   vuejs-mysql:

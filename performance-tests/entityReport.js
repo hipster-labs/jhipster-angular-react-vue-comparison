@@ -12,12 +12,12 @@ const {URL} = require('url');
             backgroundColor: '#f9586a42',   
         },
         {
-            url:  'http://localhost:8081/customer',
+            url:  'http://localhost:8081/entity/customer',
             name:  'react',
             backgroundColor:  '#60dbfb78',
         },
         {
-            url:  'http://localhost:8082/customer',
+            url:  'http://localhost:8082/entity/customer',
             name:  'vuejs',
             backgroundColor:  '#0cce6bab',
         },
