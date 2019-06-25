@@ -1,35 +1,32 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import axios, { AxiosInstance, AxiosPromise } from 'axios';
 
-import { SERVER_API_URL } from 'app/app.constants';
+export default class HealthService {
+  public separator: string;
+  private axios: AxiosInstance;
 
-@Injectable({ providedIn: 'root' })
-export class JhiHealthService {
-  separator: string;
-
-  constructor(private http: HttpClient) {
+  constructor() {
     this.separator = '.';
+    this.axios = axios;
   }
 
-  checkHealth(): Observable<any> {
-    return this.http.get(SERVER_API_URL + 'management/health');
+  public checkHealth(): AxiosPromise<any> {
+    return axios.get('management/health');
   }
 
-  transformHealthData(data): any {
+  public transformHealthData(data: any): any {
     const response = [];
     this.flattenHealthData(response, null, data.details);
     return response;
   }
 
-  getBaseName(name): string {
+  public getBaseName(name: string): string {
     if (name) {
       const split = name.split('.');
       return split[0];
     }
   }
 
-  getSubSystemName(name): string {
+  public getSubSystemName(name: string): string {
     if (name) {
       const split = name.split('.');
       split.splice(0, 1);
@@ -38,10 +35,11 @@ export class JhiHealthService {
     }
   }
 
-  /* private methods */
-  private addHealthObject(result, isLeaf, healthObject, name): any {
-    const healthData: any = {
-      name
+  public addHealthObject(result: any, isLeaf: boolean, healthObject: any, name: string) {
+    const healthData = {
+      name,
+      details: undefined,
+      error: undefined
     };
 
     const details = {};
@@ -73,7 +71,7 @@ export class JhiHealthService {
     return healthData;
   }
 
-  private flattenHealthData(result, path, data): any {
+  public flattenHealthData(result: any, path: any, data: any): any {
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
         const value = data[key];
@@ -90,7 +88,7 @@ export class JhiHealthService {
     return result;
   }
 
-  private getModuleName(path, name): string {
+  public getModuleName(path: any, name: string) {
     let result;
     if (path && name) {
       result = path + this.separator + name;
@@ -104,7 +102,7 @@ export class JhiHealthService {
     return result;
   }
 
-  private hasSubSystem(healthObject): boolean {
+  public hasSubSystem(healthObject: any): any {
     let result = false;
 
     for (const key in healthObject) {
@@ -118,7 +116,7 @@ export class JhiHealthService {
     return result;
   }
 
-  private isHealthObject(healthObject): boolean {
+  public isHealthObject(healthObject: any): any {
     let result = false;
 
     for (const key in healthObject) {

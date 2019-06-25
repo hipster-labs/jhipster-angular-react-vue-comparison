@@ -1,5 +1,4 @@
 {
-  "rulesDirectory": ["node_modules/codelyzer"],
   "extends": ["tslint-config-prettier"],
   "rules": {
     "class-name": true,
@@ -9,6 +8,7 @@
     "forin": true,
     "indent": [true, "spaces"],
     "label-position": true,
+    "max-line-length": [true, 180],
     "member-access": false,
     "member-ordering": [true, "static-before-instance", "variables-before-functions"],
     "no-arg": true,
@@ -59,18 +59,6 @@
         "method": "never",
         "named": "never"
       }
-    ],
-
-    "directive-selector": [true, "attribute", "jhi", "camelCase"],
-    "component-selector": [true, "element", "jhi", "kebab-case"],
-    "no-inputs-metadata-property": true,
-    "no-outputs-metadata-property": true,
-    "no-host-metadata-property": true,
-    "no-input-rename": true,
-    "no-output-rename": true,
-    "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": false,
-    "component-class-suffix": true,
-    "directive-class-suffix": true
+    ]
   }
 }

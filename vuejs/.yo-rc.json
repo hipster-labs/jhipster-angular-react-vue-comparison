@@ -36,10 +36,22 @@
     "otherModules": [
       {
         "name": "generator-jhipster-vuejs",
-        "version": "latest"
+        "version": "1.1.0"
       }
     ],
-    "blueprint": "generator-jhipster-vuejs"
+    "blueprint": "generator-jhipster-vuejs",
+    "blueprintVersion": "1.1.0"
   },
-  "entities": ["Customer"]
+  "entities": ["Customer"],
+  "generator-jhipster-vuejs": {
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "monolith",
+    "baseName": "vuejs",
+    "useSass": true,
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "vuejs",
+    "clientTheme": "none",
+    "languages": ["en", "fr"]
+  }
 }

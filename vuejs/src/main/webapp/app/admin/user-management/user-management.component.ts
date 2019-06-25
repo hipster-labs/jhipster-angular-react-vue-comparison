@@ -1,141 +1,115 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpResponse } from '@angular/common/http';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Inject, Vue } from 'vue-property-decorator';
+import UserManagementService from './user-management.service';
+import AlertService from '@/shared/alert/alert.service';
 
-import { ActivatedRoute, Router } from '@angular/router';
-import { JhiEventManager, JhiParseLinks, JhiAlertService } from 'ng-jhipster';
+@Component
+export default class JhiUserManagementComponent extends Vue {
+  @Inject('alertService') private alertService: () => AlertService;
+  @Inject('userService') private userManagementService: () => UserManagementService;
+  public error = '';
+  public success = '';
+  public users: any[] = [];
+  public itemsPerPage = 20;
+  public queryCount: number = null;
+  public page = 1;
+  public previousPage: number = null;
+  public propOrder = 'id';
+  public reverse = false;
+  public totalItems = 0;
+  public removeId: number = null;
 
-import { ITEMS_PER_PAGE } from 'app/shared';
-import { AccountService, UserService, User } from 'app/core';
-import { UserMgmtDeleteDialogComponent } from './user-management-delete-dialog.component';
+  public dismissCountDown: number = this.$store.getters.dismissCountDown;
+  public dismissSecs: number = this.$store.getters.dismissSecs;
+  public alertType: string = this.$store.getters.alertType;
+  public alertMessage: any = this.$store.getters.alertMessage;
 
-@Component({
-  selector: 'jhi-user-mgmt',
-  templateUrl: './user-management.component.html'
-})
-export class UserMgmtComponent implements OnInit, OnDestroy {
-  currentAccount: any;
-  users: User[];
-  error: any;
-  success: any;
-  routeData: any;
-  links: any;
-  totalItems: any;
-  itemsPerPage: any;
-  page: any;
-  predicate: any;
-  previousPage: any;
-  reverse: any;
-
-  constructor(
-    private userService: UserService,
-    private alertService: JhiAlertService,
-    private accountService: AccountService,
-    private parseLinks: JhiParseLinks,
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private eventManager: JhiEventManager,
-    private modalService: NgbModal
-  ) {
-    this.itemsPerPage = ITEMS_PER_PAGE;
-    this.routeData = this.activatedRoute.data.subscribe(data => {
-      this.page = data['pagingParams'].page;
-      this.previousPage = data['pagingParams'].page;
-      this.reverse = data['pagingParams'].ascending;
-      this.predicate = data['pagingParams'].predicate;
-    });
+  public getAlertFromStore() {
+    this.dismissCountDown = this.$store.getters.dismissCountDown;
+    this.dismissSecs = this.$store.getters.dismissSecs;
+    this.alertType = this.$store.getters.alertType;
+    this.alertMessage = this.$store.getters.alertMessage;
   }
 
-  ngOnInit() {
-    this.accountService.identity().then(account => {
-      this.currentAccount = account;
-      this.loadAll();
-      this.registerChangeInUsers();
-    });
+  public countDownChanged(dismissCountDown: number) {
+    this.alertService().countDownChanged(dismissCountDown);
+    this.getAlertFromStore();
   }
 
-  ngOnDestroy() {
-    this.routeData.unsubscribe();
+  public mounted(): void {
+    this.loadAll();
   }
 
-  registerChangeInUsers() {
-    this.eventManager.subscribe('userListModification', response => this.loadAll());
-  }
-
-  setActive(user, isActivated) {
+  public setActive(user, isActivated): void {
     user.activated = isActivated;
-
-    this.userService.update(user).subscribe(response => {
-      if (response.status === 200) {
+    this.userManagementService()
+      .update(user)
+      .then(() => {
         this.error = null;
         this.success = 'OK';
         this.loadAll();
-      } else {
+      })
+      .catch(() => {
         this.success = null;
         this.error = 'ERROR';
-      }
-    });
+        user.activated = false;
+      });
   }
 
-  loadAll() {
-    this.userService
-      .query({
+  public loadAll(): void {
+    this.userManagementService()
+      .retrieve({
         page: this.page - 1,
         size: this.itemsPerPage,
         sort: this.sort()
       })
-      .subscribe((res: HttpResponse<User[]>) => this.onSuccess(res.body, res.headers), (res: HttpResponse<any>) => this.onError(res.body));
+      .then(res => {
+        this.users = res.data;
+        this.totalItems = Number(res.headers['x-total-count']);
+        this.queryCount = this.totalItems;
+      });
   }
 
-  trackIdentity(index, item: User) {
-    return item.id;
-  }
-
-  sort() {
-    const result = [this.predicate + ',' + (this.reverse ? 'asc' : 'desc')];
-    if (this.predicate !== 'id') {
+  public sort(): any {
+    const result = [this.propOrder + ',' + (this.reverse ? 'asc' : 'desc')];
+    if (this.propOrder !== 'id') {
       result.push('id');
     }
     return result;
   }
 
-  loadPage(page: number) {
+  public loadPage(page: number): void {
     if (page !== this.previousPage) {
       this.previousPage = page;
       this.transition();
     }
   }
 
-  transition() {
-    this.router.navigate(['/admin/user-management'], {
-      queryParams: {
-        page: this.page,
-        sort: this.predicate + ',' + (this.reverse ? 'asc' : 'desc')
-      }
-    });
+  public transition(): void {
     this.loadAll();
   }
 
-  deleteUser(user: User) {
-    const modalRef = this.modalService.open(UserMgmtDeleteDialogComponent, { size: 'lg', backdrop: 'static' });
-    modalRef.componentInstance.user = user;
-    modalRef.result.then(
-      result => {
-        // Left blank intentionally, nothing to do here
-      },
-      reason => {
-        // Left blank intentionally, nothing to do here
-      }
-    );
+  public changeOrder(propOrder: string): void {
+    this.propOrder = propOrder;
+    this.reverse = !this.reverse;
   }
 
-  private onSuccess(data, headers) {
-    this.links = this.parseLinks.parse(headers.get('link'));
-    this.totalItems = headers.get('X-Total-Count');
-    this.users = data;
+  public deleteUser(): void {
+    this.userManagementService()
+      .remove(this.removeId)
+      .then(res => {
+        const message = this.$t(res.headers['x-vuejsapp-alert'], { param: res.headers['x-vuejsapp-params'] });
+        this.alertService().showAlert(message, 'danger');
+        this.getAlertFromStore();
+        this.removeId = null;
+        this.loadAll();
+      });
   }
 
-  private onError(error) {
-    this.alertService.error(error.error, error.message, null);
+  public prepareRemove(instance): void {
+    this.removeId = instance.login;
+  }
+
+  public get username(): string {
+    return this.$store.getters.account ? this.$store.getters.account.login : '';
   }
 }

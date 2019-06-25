@@ -57,38 +57,52 @@ To benefit from TypeScript type definitions from [DefinitelyTyped][] repository 
     npm install --save-dev --save-exact @types/leaflet
 
 Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
+Edit [src/main/webapp/app/main.ts](src/main/webapp/app/main.ts) file:
+
+```
+import 'leaflet/dist/leaflet.js';
+```
+
+Edit [src/main/webapp/content/scss/vendor.scss](src/main/webapp/content/scss/vendor.scss) file:
+
+```
+@import '~leaflet/dist/leaflet.scss';
+```
+
 Note: there are still few other things remaining to do for Leaflet that we won't detail here.
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 
+### Using vue-cli
+
+You can also use [Vue CLI][] to display the project using vue UI.
+
+For example, the following command:
+
+    vue ui
+
+will generate open Vue Project Manager. From there, you'll be able to manage your project as any other Vue.js projects.
+
 ## Building for production
 
-### Packaging as jar
+To optimize the vuejs application for production, run:
 
-To build the final jar and optimize the vuejs application for production, run:
-
-    ./mvnw -Pprod clean verify
+    ./mvnw -Pprod clean package
 
 This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
 To ensure everything worked, run:
 
-    java -jar target/*.jar
+    java -jar target/*.war
 
 Then navigate to [http://localhost:8082](http://localhost:8082) in your browser.
 
 Refer to [Using JHipster in production][] for more details.
 
-### Packaging as war
-
-To package your application as a war in order to deploy it to an application server, run:
-
-    ./mvnw -Pprod,war clean verify
-
 ## Testing
 
 To launch your application's tests, run:
 
-    ./mvnw verify
+    ./mvnw clean test
 
 ### Client tests
 
@@ -106,21 +120,11 @@ Sonar is used to analyse code quality. You can start a local Sonar server (acces
 docker-compose -f src/main/docker/sonar.yml up -d
 ```
 
-You can run a Sonar analysis with using the [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) or by using the maven plugin.
-
 Then, run a Sonar analysis:
 
 ```
-./mvnw -Pprod clean verify sonar:sonar
+./mvnw -Pprod clean test sonar:sonar
 ```
-
-If you need to re-run the Sonar phase, please be sure to specify at least the `initialize` phase since Sonar properties are loaded from the sonar-project.properties file.
-
-```
-./mvnw initialize sonar:sonar
-```
-
-or
 
 For more information, refer to the [Code quality page][].
 
@@ -139,7 +143,7 @@ To stop it and remove the container, run:
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
-    ./mvnw -Pprod verify jib:dockerBuild
+    ./mvnw package -Pprod verify jib:dockerBuild
 
 Then run:
 
@@ -162,10 +166,10 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [node.js]: https://nodejs.org/
 [yarn]: https://yarnpkg.org/
 [webpack]: https://webpack.github.io/
-[angular cli]: https://cli.angular.io/
+[vue cli]: https://cli.vuejs.org/
 [browsersync]: http://www.browsersync.io/
 [jest]: https://facebook.github.io/jest/
 [jasmine]: http://jasmine.github.io/2.0/introduction.html
-[protractor]: https://angular.github.io/protractor/
+[protractor]: http://www.protractortest.org/
 [leaflet]: http://leafletjs.com/
 [definitelytyped]: http://definitelytyped.org/

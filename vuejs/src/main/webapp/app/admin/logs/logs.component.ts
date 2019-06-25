@@ -1,35 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Vue, Inject } from 'vue-property-decorator';
 
-import { Log } from './log.model';
-import { LogsService } from './logs.service';
+import LogsService from './logs.service';
 
-@Component({
-  selector: 'jhi-logs',
-  templateUrl: './logs.component.html'
-})
-export class LogsComponent implements OnInit {
-  loggers: Log[];
-  filter: string;
-  orderProp: string;
-  reverse: boolean;
+@Component
+export default class JhiLogs extends Vue {
+  @Inject('logsService') private logsService: () => LogsService;
+  private loggers: any[] = [];
+  public filtered = '';
+  public orderProp = 'name';
+  public reverse = false;
 
-  constructor(private logsService: LogsService) {
-    this.filter = '';
-    this.orderProp = 'name';
-    this.reverse = false;
+  public mounted(): void {
+    this.init();
   }
 
-  ngOnInit() {
-    this.logsService.findAll().subscribe(response => this.extractLoggers(response));
+  public init(): void {
+    this.logsService()
+      .findAll()
+      .then(response => {
+        this.extractLoggers(response);
+      });
   }
 
-  changeLevel(name: string, level: string) {
-    this.logsService.changeLevel(name, level).subscribe(() => {
-      this.logsService.findAll().subscribe(response => this.extractLoggers(response));
-    });
+  public updateLevel(name, level): void {
+    this.logsService()
+      .changeLevel(name, level)
+      .then(() => {
+        this.init();
+      });
+  }
+
+  public changeOrder(orderProp): void {
+    this.orderProp = orderProp;
+    this.reverse = !this.reverse;
   }
 
   private extractLoggers(response) {
-    this.loggers = Object.entries(response.body.loggers).map(e => new Log(e[0], e[1]['effectiveLevel']));
+    this.loggers = [];
+    if (response.data) {
+      for (const key of Object.keys(response.data.loggers)) {
+        const logger = response.data.loggers[key];
+        this.loggers.push({ name: key, level: logger.effectiveLevel });
+      }
+    }
   }
 }

@@ -43,7 +43,6 @@ public class CacheConfiguration {
             createCache(cm, tech.jhipster.vuejs.demo.domain.User.class.getName());
             createCache(cm, tech.jhipster.vuejs.demo.domain.Authority.class.getName());
             createCache(cm, tech.jhipster.vuejs.demo.domain.User.class.getName() + ".authorities");
-            createCache(cm, tech.jhipster.vuejs.demo.domain.Customer.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
