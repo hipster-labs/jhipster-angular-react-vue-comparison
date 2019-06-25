@@ -24,6 +24,12 @@ const JhiLogsComponent = () => import('../admin/logs/logs.vue');
 const JhiAuditsComponent = () => import('../admin/audits/audits.vue');
 const JhiMetricsComponent = () => import('../admin/metrics/metrics.vue');
 /* tslint:disable */
+// prettier-ignore
+const Customer = () => import('../entities/customer/customer.vue');
+// prettier-ignore
+const CustomerUpdate = () => import('../entities/customer/customer-update.vue');
+// prettier-ignore
+const CustomerDetails = () => import('../entities/customer/customer-details.vue');
 // jhipster-needle-add-entity-to-router-import - JHipster will import entities to the router here
 
 Vue.use(Router);
@@ -140,6 +146,31 @@ export default new Router({
       name: 'JhiConfigurationComponent',
       component: JhiConfigurationComponent,
       meta: { authorities: ['ROLE_ADMIN'] }
+    }
+    ,
+    {
+      path: '/entity/customer',
+      name: 'Customer',
+      component: Customer,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/customer/new',
+      name: 'CustomerCreate',
+      component: CustomerUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/customer/:customerId/edit',
+      name: 'CustomerEdit',
+      component: CustomerUpdate,
+      meta: { authorities: ['ROLE_USER'] }
+    },
+    {
+      path: '/entity/customer/:customerId/view',
+      name: 'CustomerView',
+      component: CustomerDetails,
+      meta: { authorities: ['ROLE_USER'] }
     }
     // jhipster-needle-add-entity-to-router - JHipster will add entities to the router here
   ]
