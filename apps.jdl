@@ -37,7 +37,7 @@ application {
     baseName vuejs,
     applicationType monolith,
     clientFramework vuejs,
-    packageName tech.jhipster.react.demo,
+    packageName tech.jhipster.vuejs.demo,
     serverPort 8082
 
     authenticationType jwt,
