@@ -1,0 +1,33 @@
+
+application {
+  config {
+    baseName vuejs,
+    applicationType monolith,
+    clientFramework vuejs,
+    packageName tech.jhipster.vuejs.demo,
+    serverPort 8082
+
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider ehcache,
+    buildTool maven,
+    testFrameworks [protractor, gatling]
+  }
+  entities *
+}
+
+entity Customer {
+    firstName String required
+    lastName String required
+    gender Gender required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}

@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="tech.jhipster.react.demo" level="INFO"/>
+    <logger name="tech.jhipster.vuejs.demo" level="INFO"/>
 
     <logger name="io.github.jhipster" level="WARN"/>
 
