@@ -47,12 +47,7 @@ router.beforeEach((to, from, next) => {
   }
 
   if (to.meta && to.meta.authorities && to.meta.authorities.length > 0) {
-    if (!accountService.hasAnyAuthority(to.meta.authorities)) {
-      sessionStorage.setItem('requested-url', to.fullPath);
-      next('/forbidden');
-    } else {
-      next();
-    }
+    next();
   } else {
     // no authorities, so just proceed
     next();
