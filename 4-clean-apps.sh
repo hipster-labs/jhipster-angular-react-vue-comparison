@@ -1,1 +1,0 @@
-rm -rf angular react vuejs docker-compose 
